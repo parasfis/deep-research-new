@@ -1,93 +1,121 @@
-"""Web search and scraping utilities for Deep Research Assistant.
+"""Web search functionality for Deep Research Assistant.
 
-This module provides functionality for searching the web and scraping content
-from various sources in parallel.
+This module provides functionality for performing web searches using various search engines.
 """
 
-import logging
-import time
-import requests
 import os
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import Dict, Any, List, Optional, Tuple, Union
+import time
+import logging
+import requests
+from typing import Dict, List, Optional, Any, Tuple
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timedelta
 
-# Import search engine APIs
-try:
-    from duckduckgo_search import DDGS
-except ImportError:
-    DDGS = None
-
-try:
-    from serpapi import GoogleSearch
-except ImportError:
-    GoogleSearch = None
+# Configure logging
+logger = logging.getLogger(__name__)
 
 import config
 
-logger = logging.getLogger(__name__)
-
-
 class WebSearcher:
-    """Class for performing web searches and content extraction."""
+    """Class for performing web searches using various search engines."""
 
-    def __init__(self, search_engines: List[str] = None, timeout: int = None):
-        """Initialize the web searcher.
+    def __init__(self):
+        """Initialize the web searcher."""
+        self.search_engines = config.SEARCH_ENGINES
+        self.max_results_per_engine = config.MAX_RESULTS_PER_ENGINE
+        self.timeout = config.SEARCH_TIMEOUT
 
-        Args:
-            search_engines: List of search engines to use. Defaults to config.SEARCH_ENGINES.
-            timeout: Timeout for search requests in seconds. Defaults to config.SEARCH_TIMEOUT.
-        """
-        self.search_engines = search_engines or config.SEARCH_ENGINES
-        self.timeout = timeout or config.SEARCH_TIMEOUT
-        self.user_agent = (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-        )
+        # Initialize session
         self.session = requests.Session()
-        self.session.headers.update({"User-Agent": self.user_agent})
+        self.session.headers.update({
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        })
 
-    def search(self, query: str, max_results: int = 10) -> List[Dict[str, Any]]:
-        """Perform a search across multiple search engines.
+        # Initialize search engine availability
+        self.duckduckgo_available = False
+        self.serpapi_available = False
+        self.tavily_available = False
+
+        # Try importing search engines
+        try:
+            from duckduckgo_search import ddg
+            self.ddg = ddg
+            self.duckduckgo_available = True
+        except ImportError as e:
+            logger.warning(f"Could not import duckduckgo_search. DuckDuckGo search will be unavailable. Error: {e}")
+
+        try:
+            from serpapi import GoogleSearch
+            self.google_search = GoogleSearch
+            self.serpapi_available = True
+        except ImportError as e:
+            logger.warning(f"Could not import serpapi. Google search will be unavailable. Error: {e}")
+
+        try:
+            from tavily import TavilyClient
+            api_key = os.getenv("TAVILY_API_KEY")
+            if api_key:
+                self.tavily_client = TavilyClient(api_key=api_key)
+                self.tavily_available = True
+            else:
+                logger.warning("TAVILY_API_KEY not found in environment variables. Tavily search will be unavailable.")
+        except ImportError as e:
+            logger.warning(f"Could not import tavily. Tavily search will be unavailable. Error: {e}")
+
+    def search(self, query: str, max_results: Optional[int] = None) -> List[Dict]:
+        """Perform a web search using multiple search engines.
 
         Args:
-            query: The search query.
-            max_results: Maximum number of results to return per search engine.
+            query: Search query.
+            max_results: Maximum number of results to return. If None, uses config value.
 
         Returns:
             List of search results with metadata.
         """
-        all_results = []
-        
-        with ThreadPoolExecutor(max_workers=len(self.search_engines)) as executor:
-            future_to_engine = {
-                executor.submit(self._search_with_engine, engine, query, max_results): engine
-                for engine in self.search_engines
-            }
-            
-            for future in as_completed(future_to_engine):
-                engine = future_to_engine[future]
-                try:
-                    results = future.result()
-                    all_results.extend(results)
-                    logger.info(f"Found {len(results)} results from {engine}")
-                except Exception as e:
-                    logger.error(f"Error searching with {engine}: {e}")
-        
-        # Remove duplicates based on URL
-        unique_results = []
-        seen_urls = set()
-        
-        for result in all_results:
-            url = result.get("url")
-            if url and url not in seen_urls:
-                seen_urls.add(url)
-                unique_results.append(result)
-        
-        return unique_results[:max_results]
+        if max_results is None:
+            max_results = self.max_results_per_engine
 
-    def _search_with_engine(self, engine: str, query: str, max_results: int) -> List[Dict[str, Any]]:
+        results = []
+        successful_engines = []
+
+        # Try each engine in order, stopping once we get results
+        for engine in self.search_engines:
+            try:
+                engine_results = self._search_with_engine(engine, query, max_results)
+                if engine_results:
+                    logger.info(f"Found {len(engine_results)} results from {engine}")
+                    results.extend(engine_results)
+                    successful_engines.append(engine)
+                    # If we have enough results, we can stop
+                    if len(results) >= max_results:
+                        break
+                else:
+                    logger.info(f"No results found from {engine}")
+            except Exception as e:
+                logger.error(f"Error getting search results from {engine}: {e}")
+        
+        # If we didn't get any results from primary engines, try parallel search as fallback
+        if not results:
+            logger.warning("No results from primary engine search. Trying parallel search as fallback.")
+            with ThreadPoolExecutor() as executor:
+                futures = []
+                for engine in self.search_engines:
+                    if engine not in successful_engines:  # Don't retry engines that we already tried
+                        futures.append(executor.submit(self._search_with_engine, engine, query, max_results))
+
+                for future in as_completed(futures):
+                    try:
+                        engine_results = future.result()
+                        results.extend(engine_results)
+                    except Exception as e:
+                        # Already logged in _search_with_engine
+                        pass
+
+        return results[:max_results]  # Ensure we don't return more than max_results
+
+    def _search_with_engine(self, engine: str, query: str, max_results: int) -> List[Dict]:
         """Perform a search with a specific search engine.
 
         Args:
@@ -98,45 +126,53 @@ class WebSearcher:
         Returns:
             List of search results with metadata.
         """
-        if engine == "duckduckgo":
+        if engine == "duckduckgo" and self.duckduckgo_available:
             return self._search_duckduckgo(query, max_results)
-        elif engine == "google":
+        elif engine == "google" and self.serpapi_available:
             return self._search_google(query, max_results)
-        elif engine == "searx":
-            return self._search_searx(query, max_results)
+        elif engine == "tavily" and self.tavily_available:
+            return self._search_tavily(query, max_results)
         else:
-            logger.warning(f"Unknown search engine: {engine}")
+            logger.warning(f"Search engine {engine} is not available")
             return []
 
-    def _search_duckduckgo(self, query: str, max_results: int) -> List[Dict[str, Any]]:
-        """Search using DuckDuckGo.
+    def _search_duckduckgo(self, query: str, max_results: int = 10) -> List[Dict]:
+        """Perform a search using DuckDuckGo.
 
         Args:
-            query: The search query.
+            query: Search query.
             max_results: Maximum number of results to return.
 
         Returns:
             List of search results with metadata.
         """
-        if not DDGS:
+        if not self.duckduckgo_available:
             logger.error("DuckDuckGo search module not available")
             return []
-            
+
         try:
-            results = []
-            with DDGS() as ddgs:
-                ddgs_results = list(ddgs.text(query, max_results=max_results))
-                
-                for result in ddgs_results:
-                    results.append({
-                        "title": result.get("title", ""),
-                        "url": result.get("href", ""),
-                        "snippet": result.get("body", ""),
-                        "source": "duckduckgo"
-                    })
-            return results
+            # Use a more resilient approach - try up to 3 times
+            for attempt in range(3):
+                try:
+                    results = self.ddg(query, max_results=max_results)
+                    if results:
+                        return [{
+                            "title": result.get("title", ""),
+                            "url": result.get("link", ""),
+                            "snippet": result.get("body", ""),
+                            "source": "duckduckgo"
+                        } for result in results]
+                    else:
+                        logger.warning(f"Empty results from DuckDuckGo on attempt {attempt+1}")
+                        time.sleep(1)  # Wait a bit before retrying
+                except Exception as e:
+                    logger.warning(f"Error in DuckDuckGo search attempt {attempt+1}: {e}")
+                    time.sleep(1)  # Wait a bit before retrying
+                    
+            logger.error("All DuckDuckGo search attempts failed")
+            return []
         except Exception as e:
-            logger.error(f"Error in DuckDuckGo search: {e}")
+            logger.error(f"Error performing DuckDuckGo search: {e}")
             return []
 
     def _search_google(self, query: str, max_results: int) -> List[Dict[str, Any]]:
@@ -149,26 +185,33 @@ class WebSearcher:
         Returns:
             List of search results with metadata.
         """
-        if not GoogleSearch:
+        if not self.serpapi_available:
             logger.error("Google search module (SerpAPI) not available")
             return []
             
         try:
             # Note: SerpAPI requires an API key, which should be set in environment variables
-            params = {
-                "q": query,
-                "num": max_results,
-                "api_key": os.getenv("SERPAPI_KEY", "")
-            }
+            api_key = os.getenv("SERPAPI_KEY", "")
             
-            if not params["api_key"]:
+            if not api_key:
                 logger.warning("No SerpAPI key found. Google search will be skipped.")
                 return []
                 
-            search = GoogleSearch(params)
+            params = {
+                "q": query,
+                "num": max_results,
+                "api_key": api_key,
+                "gl": "us",  # Country code for search
+                "hl": "en"   # Language code
+            }
+            
+            search = self.google_search(params)
             results = []
             
             for result in search.get_dict().get("organic_results", []):
+                if not result.get("link") or not result.get("title"):
+                    continue  # Skip invalid results
+                    
                 results.append({
                     "title": result.get("title", ""),
                     "url": result.get("link", ""),
@@ -176,13 +219,16 @@ class WebSearcher:
                     "source": "google"
                 })
                 
+            if not results:
+                logger.warning(f"No results found for Google query: {query}")
+                
             return results
         except Exception as e:
             logger.error(f"Error in Google search: {e}")
             return []
 
-    def _search_searx(self, query: str, max_results: int) -> List[Dict[str, Any]]:
-        """Search using a SearX instance.
+    def _search_tavily(self, query: str, max_results: int) -> List[Dict[str, Any]]:
+        """Search using Tavily API.
 
         Args:
             query: The search query.
@@ -191,40 +237,35 @@ class WebSearcher:
         Returns:
             List of search results with metadata.
         """
-        # Use a public SearX instance (or configure your own in config)
-        searx_instance = os.getenv("SEARX_INSTANCE", "https://searx.be")
-        
+        if not self.tavily_client:
+            logger.error("Tavily client not initialized. Make sure TAVILY_API_KEY is set.")
+            return []
+            
         try:
-            params = {
-                "q": query,
-                "format": "json",
-                "categories": "general",
-                "language": "en-US",
-                "time_range": "",  # empty for no time restriction
-                "engines": "bing,brave,qwant",  # use engines that don't require API keys
-            }
-            
-            response = self.session.get(
-                f"{searx_instance}/search", 
-                params=params,
-                timeout=self.timeout
-            )
-            response.raise_for_status()
-            
-            data = response.json()
             results = []
+            search_response = self.tavily_client.search(
+                query=query,
+                search_depth="basic",
+                max_results=max_results
+            )
             
-            for result in data.get("results", [])[:max_results]:
+            for result in search_response.get("results", [])[:max_results]:
+                if not result.get("url") or not result.get("title"):
+                    continue  # Skip invalid results
+                    
                 results.append({
                     "title": result.get("title", ""),
                     "url": result.get("url", ""),
                     "snippet": result.get("content", ""),
-                    "source": "searx"
+                    "source": "tavily"
                 })
+                
+            if not results:
+                logger.warning(f"No results found for Tavily query: {query}")
                 
             return results
         except Exception as e:
-            logger.error(f"Error in SearX search: {e}")
+            logger.error(f"Error in Tavily search: {e}")
             return []
 
     def fetch_content(self, urls: List[str], max_workers: int = None) -> Dict[str, Dict[str, Any]]:

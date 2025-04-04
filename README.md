@@ -6,7 +6,7 @@ A Python application that connects to Ollama to perform deep research on any top
 
 - Connects to Ollama for LLM capabilities
 - Performs parallel internet research on any topic
-- Searches multiple engines (Google, DuckDuckGo, Searx)
+- Searches multiple engines (Google, DuckDuckGo, Tavily)
 - Interacts with users to gather context and refine research
 - Generates comprehensive research reports
 - Exports reports as downloadable PDF files

@@ -1051,3 +1051,1281 @@ Traceback (most recent call last):
   File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
     <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
 jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:41:05,785 - __main__ - INFO - Initializing Research Engine
+2025-04-04 20:41:05,785 - __main__ - INFO - Starting CLI interface
+2025-04-04 20:42:18,355 - research.engine - INFO - Starting research on topic: what are the new regulations coming for sec rule 606 in 2025?
+2025-04-04 20:42:18,425 - research.ollama_client - ERROR - Error generating response from Ollama: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-04-04 20:42:18,429 - research.engine - INFO - Starting research on topic: what are the new regulations coming for sec rule 606 in 2025?
+2025-04-04 20:42:18,433 - research.ollama_client - ERROR - Error generating response from Ollama: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-04-04 20:42:18,433 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 20:42:18,433 - research.web_search - ERROR - DuckDuckGo search module not available
+2025-04-04 20:42:18,433 - research.web_search - WARNING - No SerpAPI key found. Google search will be skipped.
+2025-04-04 20:42:18,434 - research.web_search - INFO - Found 0 results from duckduckgo
+2025-04-04 20:42:18,434 - research.web_search - INFO - Found 0 results from google
+2025-04-04 20:42:20,217 - research.web_search - ERROR - Error in SearX search: 403 Client Error: FORBIDDEN for url: https://searx.be/search?q=what+are+the+new+regulations+coming+for+sec+rule+606+in+2025%3F&format=json&categories=general&language=en-US&time_range=&engines=bing%2Cbrave%2Cqwant
+2025-04-04 20:42:20,217 - research.web_search - INFO - Found 0 results from searx
+2025-04-04 20:42:20,218 - research.web_search - INFO - Completed search for query: what are the new regulations coming for sec rule 606 in 2025?
+2025-04-04 20:42:20,218 - research.web_search - INFO - Selected 0 unique URLs for content fetching
+2025-04-04 20:42:20,222 - research.ollama_client - ERROR - Error generating response from Ollama: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-04-04 20:42:20,456 - ui.cli - ERROR - Error in CLI: name 'FPDF' is not defined
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/ui/cli.py", line 60, in start
+    self._execute_research(topic, context)
+  File "/Users/parasgupta/deep-research-new/ui/cli.py", line 177, in _execute_research
+    self._display_research_results(self.current_research)
+  File "/Users/parasgupta/deep-research-new/ui/cli.py", line 208, in _display_research_results
+    pdf_path = self._generate_pdf_report(research_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/cli.py", line 221, in _generate_pdf_report
+    pdf_path = self.pdf_generator.generate_pdf(research_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 73, in generate_pdf
+    self._generate_with_fpdf(research_data, filepath)
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 249, in _generate_with_fpdf
+    pdf = FPDF()
+          ^^^^
+NameError: name 'FPDF' is not defined
+2025-04-04 20:45:31,419 - __main__ - INFO - Initializing Research Engine
+2025-04-04 20:45:31,420 - __main__ - INFO - Starting CLI interface
+2025-04-04 20:48:40,514 - __main__ - INFO - Initializing Research Engine
+2025-04-04 20:48:40,514 - __main__ - INFO - Starting CLI interface
+2025-04-04 20:48:50,142 - research.engine - INFO - Starting research on topic: what is rule606
+2025-04-04 20:49:43,990 - research.ollama_client - ERROR - Error generating response from Ollama: Extra data: line 2 column 1 (char 91)
+2025-04-04 20:49:44,131 - research.engine - INFO - Starting research on topic: what is rule606
+2025-04-04 20:50:13,788 - research.ollama_client - ERROR - Error generating response from Ollama: Extra data: line 2 column 1 (char 90)
+2025-04-04 20:50:13,875 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 20:50:13,961 - research.web_search - WARNING - No SerpAPI key found. Google search will be skipped.
+2025-04-04 20:50:13,924 - research.web_search - ERROR - DuckDuckGo search module not available
+2025-04-04 20:50:14,837 - research.web_search - INFO - Found 0 results from google
+2025-04-04 20:50:14,838 - research.web_search - INFO - Found 0 results from duckduckgo
+2025-04-04 20:50:16,052 - research.web_search - ERROR - Error in SearX search: 403 Client Error: FORBIDDEN for url: https://searx.be/search?q=what+is+rule606&format=json&categories=general&language=en-US&time_range=&engines=bing%2Cbrave%2Cqwant
+2025-04-04 20:50:16,052 - research.web_search - INFO - Found 0 results from searx
+2025-04-04 20:50:16,053 - research.web_search - INFO - Completed search for query: what is rule606
+2025-04-04 20:50:16,053 - research.web_search - INFO - Selected 0 unique URLs for content fetching
+2025-04-04 20:51:24,194 - research.ollama_client - ERROR - Error generating response from Ollama: Extra data: line 2 column 1 (char 91)
+2025-04-04 20:51:24,682 - ui.cli - ERROR - Error in CLI: name 'FPDF' is not defined
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/ui/cli.py", line 60, in start
+    self._execute_research(topic, context)
+  File "/Users/parasgupta/deep-research-new/ui/cli.py", line 177, in _execute_research
+    self._display_research_results(self.current_research)
+  File "/Users/parasgupta/deep-research-new/ui/cli.py", line 208, in _display_research_results
+    pdf_path = self._generate_pdf_report(research_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/cli.py", line 221, in _generate_pdf_report
+    pdf_path = self.pdf_generator.generate_pdf(research_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 73, in generate_pdf
+    self._generate_with_fpdf(research_data, filepath)
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 249, in _generate_with_fpdf
+    pdf = FPDF()
+          ^^^^
+NameError: name 'FPDF' is not defined
+2025-04-04 20:53:44,371 - __main__ - INFO - Initializing Research Engine
+2025-04-04 20:53:44,371 - __main__ - INFO - Starting CLI interface
+2025-04-04 20:53:54,517 - research.engine - INFO - Starting research on topic: what is rainbow
+2025-04-04 20:54:10,450 - research.ollama_client - ERROR - Error generating response from Ollama: Extra data: line 2 column 1 (char 91)
+2025-04-04 20:54:10,464 - research.engine - INFO - Starting research on topic: what is rainbow
+2025-04-04 20:54:19,670 - research.ollama_client - ERROR - Error generating response from Ollama: Extra data: line 2 column 1 (char 91)
+2025-04-04 20:54:19,677 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 20:54:19,686 - research.web_search - ERROR - DuckDuckGo search module not available
+2025-04-04 20:54:19,687 - research.web_search - WARNING - No SerpAPI key found. Google search will be skipped.
+2025-04-04 20:54:19,690 - research.web_search - INFO - Found 0 results from duckduckgo
+2025-04-04 20:54:19,702 - research.web_search - INFO - Found 0 results from google
+2025-04-04 20:54:20,394 - research.web_search - ERROR - Error in SearX search: 403 Client Error: FORBIDDEN for url: https://searx.be/search?q=what+is+rainbow&format=json&categories=general&language=en-US&time_range=&engines=bing%2Cbrave%2Cqwant
+2025-04-04 20:54:20,394 - research.web_search - INFO - Found 0 results from searx
+2025-04-04 20:54:20,395 - research.web_search - INFO - Completed search for query: what is rainbow
+2025-04-04 20:54:20,396 - research.web_search - INFO - Selected 0 unique URLs for content fetching
+2025-04-04 20:55:06,489 - research.ollama_client - ERROR - Error generating response from Ollama: Extra data: line 2 column 1 (char 91)
+2025-04-04 20:55:06,891 - utils.pdf_generator - ERROR - Error generating PDF with ReportLab: "Style 'Heading1' already defined in stylesheet"
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 103, in generate_pdf
+    self._generate_with_reportlab(research_data, filepath)
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 154, in _generate_with_reportlab
+    styles.add(ParagraphStyle(
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/reportlab/lib/styles.py", line 242, in add
+    raise KeyError("Style '%s' already defined in stylesheet" % key)
+KeyError: "Style 'Heading1' already defined in stylesheet"
+2025-04-04 20:55:06,904 - utils.pdf_generator - WARNING - ReportLab generation failed. Attempting fallback with FPDF.
+2025-04-04 20:55:06,941 - utils.pdf_generator - INFO - Generated PDF report using FPDF: reports/what_is_rainbow_20250404_205506.pdf
+2025-04-04 21:24:12,048 - __main__ - INFO - Initializing Research Engine
+2025-04-04 21:24:12,048 - __main__ - INFO - Starting CLI interface
+2025-04-04 21:24:22,289 - research.engine - INFO - Starting research on topic: what is rainbow
+2025-04-04 21:24:37,769 - research.engine - INFO - Starting research on topic: what is rainbow
+2025-04-04 21:24:44,143 - research.engine - INFO - Executing 4 parallel searches
+2025-04-04 21:24:47,651 - research.web_search - ERROR - Error searching for query How do rainbows form in the atmosphere?: name 'DUCKDUCKGO_AVAILABLE' is not defined
+2025-04-04 21:24:47,709 - research.web_search - ERROR - Error searching for query What is the scientific explanation of a rainbow?: name 'DUCKDUCKGO_AVAILABLE' is not defined
+2025-04-04 21:24:47,937 - research.web_search - ERROR - Error searching for query What is the cultural significance of rainbows in different societies?: name 'DUCKDUCKGO_AVAILABLE' is not defined
+2025-04-04 21:24:48,174 - research.web_search - ERROR - Error searching for query What are the different types of rainbows?: name 'DUCKDUCKGO_AVAILABLE' is not defined
+2025-04-04 21:24:48,176 - research.web_search - INFO - Selected 0 unique URLs for content fetching
+2025-04-04 21:25:18,357 - research.ollama_client - ERROR - Error generating response from Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:25:18,780 - utils.pdf_generator - INFO - Generated PDF report using ReportLab: reports/what_is_rainbow_20250404_212518.pdf
+2025-04-04 21:26:56,762 - __main__ - INFO - Initializing Research Engine
+2025-04-04 21:26:56,762 - __main__ - INFO - Starting CLI interface
+2025-04-04 21:27:04,667 - research.engine - INFO - Starting research on topic: what is rainbow
+2025-04-04 21:27:34,774 - research.ollama_client - ERROR - Error generating response from Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:27:34,792 - research.ollama_client - ERROR - Failed to generate research query: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:27:34,972 - research.engine - INFO - Starting research on topic: what is rainbow
+2025-04-04 21:27:55,859 - research.engine - INFO - Executing 4 parallel searches
+2025-04-04 21:27:56,000 - research.web_search - ERROR - Error getting search results: name 'DUCKDUCKGO_AVAILABLE' is not defined
+2025-04-04 21:27:56,000 - research.web_search - WARNING - Using default public SearX instance (searx.be). This may be unreliable or forbidden (403). Consider setting SEARX_INSTANCE environment variable to a different instance.
+2025-04-04 21:27:56,000 - research.web_search - WARNING - No SerpAPI key found. Google search will be skipped.
+2025-04-04 21:27:56,010 - research.web_search - WARNING - No SerpAPI key found. Google search will be skipped.
+2025-04-04 21:27:56,010 - research.web_search - WARNING - Using default public SearX instance (searx.be). This may be unreliable or forbidden (403). Consider setting SEARX_INSTANCE environment variable to a different instance.
+2025-04-04 21:27:56,011 - research.web_search - ERROR - Error getting search results: name 'DUCKDUCKGO_AVAILABLE' is not defined
+2025-04-04 21:27:56,027 - research.web_search - WARNING - No SerpAPI key found. Google search will be skipped.
+2025-04-04 21:27:56,027 - research.web_search - WARNING - Using default public SearX instance (searx.be). This may be unreliable or forbidden (403). Consider setting SEARX_INSTANCE environment variable to a different instance.
+2025-04-04 21:27:56,027 - research.web_search - ERROR - Error getting search results: name 'DUCKDUCKGO_AVAILABLE' is not defined
+2025-04-04 21:27:56,028 - research.web_search - WARNING - No SerpAPI key found. Google search will be skipped.
+2025-04-04 21:27:56,028 - research.web_search - WARNING - Using default public SearX instance (searx.be). This may be unreliable or forbidden (403). Consider setting SEARX_INSTANCE environment variable to a different instance.
+2025-04-04 21:27:56,028 - research.web_search - ERROR - Error getting search results: name 'DUCKDUCKGO_AVAILABLE' is not defined
+2025-04-04 21:27:56,879 - research.web_search - ERROR - SearX instance returned 403 Forbidden. The instance may be blocking automated requests.
+2025-04-04 21:27:56,882 - research.web_search - ERROR - SearX instance returned 403 Forbidden. The instance may be blocking automated requests.
+2025-04-04 21:27:56,885 - research.web_search - ERROR - SearX instance returned 403 Forbidden. The instance may be blocking automated requests.
+2025-04-04 21:27:56,901 - research.web_search - ERROR - SearX instance returned 403 Forbidden. The instance may be blocking automated requests.
+2025-04-04 21:27:58,366 - research.web_search - INFO - Completed search for query: What is the cultural significance of rainbows in different societies?
+2025-04-04 21:27:58,427 - research.web_search - INFO - Completed search for query: What are the different types of rainbows?
+2025-04-04 21:27:58,677 - research.web_search - INFO - Completed search for query: How do rainbows form in the atmosphere?
+2025-04-04 21:27:58,738 - research.web_search - INFO - Completed search for query: What is the scientific explanation of a rainbow?
+2025-04-04 21:27:58,739 - research.web_search - INFO - Selected 10 unique URLs for content fetching
+2025-04-04 21:27:59,304 - research.web_search - INFO - Successfully fetched content from https://explorian.io/rainbow-symbolism-in-different-cultures-and-societies
+2025-04-04 21:27:59,683 - research.web_search - INFO - Successfully fetched content from https://brainwisemind.com/what-does-rainbow-symbolize/
+2025-04-04 21:27:59,699 - research.web_search - INFO - Successfully fetched content from https://brainwisemind.com/what-do-rainbows-symbolize/
+2025-04-04 21:27:59,724 - research.web_search - INFO - Successfully fetched content from https://brainwisemind.com/what-does-a-rainbow-symbolize/
+2025-04-04 21:28:00,024 - research.web_search - INFO - Successfully fetched content from https://en.wikipedia.org/wiki/Rainbows_in_culture
+2025-04-04 21:28:00,268 - research.web_search - INFO - Successfully fetched content from https://www.worldatlas.com/articles/what-are-the-different-types-of-rainbows.html
+2025-04-04 21:28:00,902 - research.web_search - INFO - Successfully fetched content from https://www.farmersalmanac.com/types-of-rainbows
+2025-04-04 21:28:02,378 - research.web_search - INFO - Successfully fetched content from https://naturemessage.com/what-are-the-12-types-of-rainbows-called/
+2025-04-04 21:28:02,421 - research.web_search - INFO - Successfully fetched content from https://interestingengineering.com/science/7-types-of-rainbows
+2025-04-04 21:28:04,235 - research.web_search - INFO - Successfully fetched content from https://www.3dglassesonline.com/understanding-the-different-types-of-rainbows/
+2025-04-04 21:28:28,203 - research.engine - INFO - Analyzed source: https://brainwisemind.com/what-does-a-rainbow-symbolize/ (relevance: 90)
+2025-04-04 21:28:34,257 - research.ollama_client - ERROR - Error generating response from Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:28:34,269 - research.ollama_client - ERROR - Error generating response from Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:28:34,272 - research.ollama_client - ERROR - Error generating response from Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:28:34,288 - research.ollama_client - ERROR - Error generating response from Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:28:34,301 - research.engine - INFO - Skipping low-relevance source: https://brainwisemind.com/what-do-rainbows-symbolize/ (relevance: 0)
+2025-04-04 21:28:34,333 - research.engine - INFO - Skipping low-relevance source: https://en.wikipedia.org/wiki/Rainbows_in_culture (relevance: 0)
+2025-04-04 21:28:34,334 - research.engine - INFO - Skipping low-relevance source: https://brainwisemind.com/what-does-rainbow-symbolize/ (relevance: 0)
+2025-04-04 21:28:34,334 - research.engine - INFO - Skipping low-relevance source: https://explorian.io/rainbow-symbolism-in-different-cultures-and-societies (relevance: 0)
+2025-04-04 21:28:58,368 - research.ollama_client - ERROR - Error generating response from Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:28:58,402 - research.engine - INFO - Skipping low-relevance source: https://www.worldatlas.com/articles/what-are-the-different-types-of-rainbows.html (relevance: 0)
+2025-04-04 21:29:04,456 - research.ollama_client - ERROR - Error generating response from Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:29:04,460 - research.ollama_client - ERROR - Error generating response from Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:29:04,460 - research.ollama_client - ERROR - Error generating response from Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:29:04,460 - research.ollama_client - ERROR - Error generating response from Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:29:04,464 - research.engine - INFO - Skipping low-relevance source: https://www.farmersalmanac.com/types-of-rainbows (relevance: 0)
+2025-04-04 21:29:04,473 - research.engine - INFO - Skipping low-relevance source: https://interestingengineering.com/science/7-types-of-rainbows (relevance: 0)
+2025-04-04 21:29:04,473 - research.engine - INFO - Skipping low-relevance source: https://naturemessage.com/what-are-the-12-types-of-rainbows-called/ (relevance: 0)
+2025-04-04 21:29:04,473 - research.engine - INFO - Skipping low-relevance source: https://www.3dglassesonline.com/understanding-the-different-types-of-rainbows/ (relevance: 0)
+2025-04-04 21:29:34,714 - research.ollama_client - ERROR - Error generating response from Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-04-04 21:29:35,403 - utils.pdf_generator - INFO - Generated PDF report using ReportLab: reports/what_is_rainbow_20250404_212935.pdf
+2025-04-04 21:32:54,286 - __main__ - INFO - Initializing Research Engine
+2025-04-04 21:32:54,286 - __main__ - INFO - Starting CLI interface
+2025-04-04 21:33:02,845 - research.engine - INFO - Starting research on topic: what is rainbow
+2025-04-04 21:33:19,053 - research.engine - INFO - Starting research on topic: what is rainbow
+2025-04-04 21:33:49,860 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting property name enclosed in double quotes: line 17 column 1 (char 625)
+2025-04-04 21:33:49,881 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 21:33:49,931 - research.web_search - WARNING - No SerpAPI key found. Google search will be skipped.
+2025-04-04 21:33:49,943 - research.web_search - WARNING - Using default public SearX instance (searx.be). This may be unreliable or forbidden (403). Consider setting SEARX_INSTANCE environment variable to a different instance.
+2025-04-04 21:33:49,945 - research.web_search - ERROR - Error in SearX search: 'WebSearcher' object has no attribute 'session'
+2025-04-04 21:33:52,845 - duckduckgo_search.utils - ERROR - 
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/duckduckgo_search/utils.py", line 39, in _get_vqd
+    vqd_index_start = resp.content.index(b"vqd='") + 5
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: subsection not found
+2025-04-04 21:33:52,849 - duckduckgo_search.utils - WARNING - keywords=what is rainbow. _get_vqd() is None. Refresh SESSION and retry...
+2025-04-04 21:33:55,632 - duckduckgo_search.utils - ERROR - 
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/duckduckgo_search/utils.py", line 39, in _get_vqd
+    vqd_index_start = resp.content.index(b"vqd='") + 5
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: subsection not found
+2025-04-04 21:33:55,633 - duckduckgo_search.utils - WARNING - keywords=what is rainbow. _get_vqd() is None. Refresh SESSION and retry...
+2025-04-04 21:33:56,141 - research.web_search - ERROR - Error performing DuckDuckGo search: 'NoneType' object is not iterable
+2025-04-04 21:33:59,446 - research.web_search - INFO - Completed search for query: what is rainbow
+2025-04-04 21:33:59,447 - research.web_search - INFO - Selected 5 unique URLs for content fetching
+2025-04-04 21:33:59,447 - research.web_search - ERROR - Error fetching content from https://www.timeanddate.com/astronomy/rainbow.html: name 'time' is not defined
+2025-04-04 21:33:59,448 - research.web_search - ERROR - Error fetching content from https://www.britannica.com/science/rainbow-atmospheric-phenomenon: name 'time' is not defined
+2025-04-04 21:33:59,448 - research.web_search - ERROR - Error fetching content from https://en.wikipedia.org/wiki/Rainbow: name 'time' is not defined
+2025-04-04 21:33:59,448 - research.web_search - ERROR - Error fetching content from https://www.almanac.com/what-rainbow-how-do-rainbows-form: name 'time' is not defined
+2025-04-04 21:33:59,448 - research.web_search - ERROR - Error fetching content from https://www.cnn.com/2025/04/03/science/video/rainbow-science-explained-digvid: name 'time' is not defined
+2025-04-04 21:36:00,048 - __main__ - INFO - Initializing Research Engine
+2025-04-04 21:36:00,048 - __main__ - INFO - Starting CLI interface
+2025-04-04 21:36:07,588 - research.engine - INFO - Starting research on topic: what is rainbow
+2025-04-04 21:37:13,702 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 21:37:13,726 - research.engine - INFO - Starting research on topic: what is rainbow
+2025-04-04 21:37:34,177 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting ',' delimiter: line 43 column 1 (char 1246)
+2025-04-04 21:37:34,180 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 21:37:34,210 - research.web_search - WARNING - No SerpAPI key found. Google search will be skipped.
+2025-04-04 21:37:34,210 - research.web_search - WARNING - Using default public SearX instance (searx.be). This may be unreliable or forbidden (403). Consider setting SEARX_INSTANCE environment variable to a different instance.
+2025-04-04 21:37:34,436 - duckduckgo_search.utils - ERROR - 
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/duckduckgo_search/utils.py", line 39, in _get_vqd
+    vqd_index_start = resp.content.index(b"vqd='") + 5
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: subsection not found
+2025-04-04 21:37:34,440 - duckduckgo_search.utils - WARNING - keywords=what is rainbow. _get_vqd() is None. Refresh SESSION and retry...
+2025-04-04 21:37:34,811 - duckduckgo_search.utils - ERROR - 
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/duckduckgo_search/utils.py", line 39, in _get_vqd
+    vqd_index_start = resp.content.index(b"vqd='") + 5
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: subsection not found
+2025-04-04 21:37:34,812 - duckduckgo_search.utils - WARNING - keywords=what is rainbow. _get_vqd() is None. Refresh SESSION and retry...
+2025-04-04 21:37:35,169 - research.web_search - ERROR - SearX instance returned 403 Forbidden. The instance may be blocking automated requests.
+2025-04-04 21:37:35,324 - research.web_search - ERROR - Error performing DuckDuckGo search: 'NoneType' object is not iterable
+2025-04-04 21:37:36,292 - research.web_search - INFO - Completed search for query: what is rainbow
+2025-04-04 21:37:36,292 - research.web_search - INFO - Selected 5 unique URLs for content fetching
+2025-04-04 21:37:36,435 - research.web_search - INFO - Successfully fetched content from https://www.timeanddate.com/astronomy/rainbow.html
+2025-04-04 21:37:36,589 - research.web_search - INFO - Successfully fetched content from https://www.britannica.com/science/rainbow-atmospheric-phenomenon
+2025-04-04 21:37:37,414 - research.web_search - INFO - Successfully fetched content from https://en.wikipedia.org/wiki/Rainbow
+2025-04-04 21:37:37,519 - research.web_search - INFO - Successfully fetched content from https://www.cnn.com/2025/04/03/science/video/rainbow-science-explained-digvid
+2025-04-04 21:37:38,854 - research.web_search - INFO - Successfully fetched content from https://www.almanac.com/what-rainbow-how-do-rainbows-form
+2025-04-04 21:41:29,662 - __main__ - INFO - Initializing Research Engine
+2025-04-04 21:41:29,662 - __main__ - INFO - Starting CLI interface
+2025-04-04 21:41:44,392 - research.engine - INFO - Starting research on topic: what is a rainbow?
+2025-04-04 21:42:23,904 - research.engine - INFO - Starting research on topic: what is a rainbow?
+2025-04-04 21:42:47,193 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 21:42:47,237 - research.web_search - WARNING - No SerpAPI key found. Google search will be skipped.
+2025-04-04 21:42:47,239 - research.web_search - WARNING - Using default public SearX instance (searx.be). This may be unreliable or forbidden (403). Consider setting SEARX_INSTANCE environment variable to a different instance.
+2025-04-04 21:42:47,643 - duckduckgo_search.utils - ERROR - 
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/duckduckgo_search/utils.py", line 39, in _get_vqd
+    vqd_index_start = resp.content.index(b"vqd='") + 5
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: subsection not found
+2025-04-04 21:42:47,655 - duckduckgo_search.utils - WARNING - keywords=what is a rainbow?. _get_vqd() is None. Refresh SESSION and retry...
+2025-04-04 21:42:47,826 - research.web_search - ERROR - SearX instance returned 403 Forbidden. The instance may be blocking automated requests.
+2025-04-04 21:42:48,030 - duckduckgo_search.utils - ERROR - 
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/duckduckgo_search/utils.py", line 39, in _get_vqd
+    vqd_index_start = resp.content.index(b"vqd='") + 5
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: subsection not found
+2025-04-04 21:42:48,031 - duckduckgo_search.utils - WARNING - keywords=what is a rainbow?. _get_vqd() is None. Refresh SESSION and retry...
+2025-04-04 21:42:48,541 - research.web_search - ERROR - Error performing DuckDuckGo search: 'NoneType' object is not iterable
+2025-04-04 21:42:57,037 - research.web_search - INFO - Completed search for query: what is a rainbow?
+2025-04-04 21:42:57,039 - research.web_search - INFO - Selected 5 unique URLs for content fetching
+2025-04-04 21:42:57,192 - research.web_search - INFO - Successfully fetched content from https://www.timeanddate.com/astronomy/rainbow.html
+2025-04-04 21:42:57,335 - research.web_search - INFO - Successfully fetched content from https://education.nationalgeographic.org/resource/rainbow/
+2025-04-04 21:42:57,353 - research.web_search - INFO - Successfully fetched content from https://www.britannica.com/science/rainbow-atmospheric-phenomenon
+2025-04-04 21:42:58,087 - research.web_search - INFO - Successfully fetched content from https://en.wikipedia.org/wiki/Rainbow
+2025-04-04 21:42:58,612 - research.web_search - INFO - Successfully fetched content from https://www.almanac.com/what-rainbow-how-do-rainbows-form
+2025-04-04 21:43:52,379 - research.ollama_client - ERROR - Failed to parse content analysis as JSON: Expecting ',' delimiter: line 5 column 1 (char 163)
+2025-04-04 21:43:52,408 - research.engine - INFO - Skipping low-relevance source: https://www.britannica.com/science/rainbow-atmospheric-phenomenon (relevance: 0)
+2025-04-04 21:44:58,654 - research.ollama_client - ERROR - Request to Ollama API timed out after 120 seconds
+2025-04-04 21:44:58,663 - research.ollama_client - ERROR - Request to Ollama API timed out after 120 seconds
+2025-04-04 21:44:58,663 - research.ollama_client - ERROR - Request to Ollama API timed out after 120 seconds
+2025-04-04 21:44:58,668 - research.ollama_client - ERROR - Failed to analyze content: Ollama API request timed out
+2025-04-04 21:44:58,669 - research.ollama_client - ERROR - Failed to analyze content: Ollama API request timed out
+2025-04-04 21:44:58,669 - research.ollama_client - ERROR - Failed to analyze content: Ollama API request timed out
+2025-04-04 21:44:58,675 - research.engine - INFO - Skipping low-relevance source: https://education.nationalgeographic.org/resource/rainbow/ (relevance: 0)
+2025-04-04 21:44:58,676 - research.engine - INFO - Skipping low-relevance source: https://en.wikipedia.org/wiki/Rainbow (relevance: 0)
+2025-04-04 21:44:58,676 - research.engine - INFO - Skipping low-relevance source: https://www.timeanddate.com/astronomy/rainbow.html (relevance: 0)
+2025-04-04 21:45:52,552 - research.ollama_client - ERROR - Request to Ollama API timed out after 120 seconds
+2025-04-04 21:45:52,581 - research.ollama_client - ERROR - Failed to analyze content: Ollama API request timed out
+2025-04-04 21:45:52,595 - research.engine - INFO - Skipping low-relevance source: https://www.almanac.com/what-rainbow-how-do-rainbows-form (relevance: 0)
+2025-04-04 21:48:49,752 - __main__ - INFO - Initializing Research Engine
+2025-04-04 21:48:49,752 - __main__ - INFO - Starting CLI interface
+2025-04-04 21:49:00,385 - research.engine - INFO - Starting research on topic: what is a rainbow?
+2025-04-04 21:49:22,400 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 21:49:22,422 - research.engine - INFO - Starting research on topic: what is a rainbow?
+2025-04-04 21:49:33,735 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 21:49:33,736 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 21:49:33,740 - research.web_search - WARNING - No SerpAPI key found. Google search will be skipped.
+2025-04-04 21:49:33,741 - research.web_search - WARNING - Using default public SearX instance (searx.be). This may be unreliable or forbidden (403). Consider setting SEARX_INSTANCE environment variable to a different instance.
+2025-04-04 21:49:33,932 - duckduckgo_search.utils - ERROR - 
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/duckduckgo_search/utils.py", line 39, in _get_vqd
+    vqd_index_start = resp.content.index(b"vqd='") + 5
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: subsection not found
+2025-04-04 21:49:33,934 - duckduckgo_search.utils - WARNING - keywords=what is a rainbow?. _get_vqd() is None. Refresh SESSION and retry...
+2025-04-04 21:49:34,249 - research.web_search - ERROR - SearX instance returned 403 Forbidden. The instance may be blocking automated requests.
+2025-04-04 21:49:34,289 - duckduckgo_search.utils - ERROR - 
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/duckduckgo_search/utils.py", line 39, in _get_vqd
+    vqd_index_start = resp.content.index(b"vqd='") + 5
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: subsection not found
+2025-04-04 21:49:34,290 - duckduckgo_search.utils - WARNING - keywords=what is a rainbow?. _get_vqd() is None. Refresh SESSION and retry...
+2025-04-04 21:49:34,800 - research.web_search - ERROR - Error performing DuckDuckGo search: 'NoneType' object is not iterable
+2025-04-04 21:49:39,416 - research.web_search - INFO - Completed search for query: what is a rainbow?
+2025-04-04 21:49:39,416 - research.web_search - INFO - Selected 5 unique URLs for content fetching
+2025-04-04 21:49:39,595 - research.web_search - INFO - Successfully fetched content from https://www.timeanddate.com/astronomy/rainbow.html
+2025-04-04 21:49:39,662 - research.web_search - INFO - Successfully fetched content from https://education.nationalgeographic.org/resource/rainbow/
+2025-04-04 21:49:39,828 - research.web_search - INFO - Successfully fetched content from https://www.britannica.com/science/rainbow-atmospheric-phenomenon
+2025-04-04 21:49:41,250 - research.web_search - INFO - Successfully fetched content from https://www.almanac.com/what-rainbow-how-do-rainbows-form
+2025-04-04 21:49:41,481 - research.web_search - INFO - Successfully fetched content from https://en.wikipedia.org/wiki/Rainbow
+2025-04-04 21:50:25,820 - research.ollama_client - ERROR - Failed to parse content analysis as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 21:50:25,823 - research.engine - INFO - Skipping low-relevance source: https://education.nationalgeographic.org/resource/rainbow/ (relevance: 0)
+2025-04-04 21:50:31,520 - research.ollama_client - ERROR - Failed to parse content analysis as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 21:50:31,522 - research.engine - INFO - Skipping low-relevance source: https://www.britannica.com/science/rainbow-atmospheric-phenomenon (relevance: 0)
+2025-04-04 21:50:37,857 - research.ollama_client - ERROR - Failed to parse content analysis as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 21:50:37,857 - research.engine - INFO - Skipping low-relevance source: https://www.almanac.com/what-rainbow-how-do-rainbows-form (relevance: 0)
+2025-04-04 21:50:41,699 - research.ollama_client - ERROR - Failed to parse content analysis as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 21:50:41,700 - research.engine - INFO - Skipping low-relevance source: https://www.timeanddate.com/astronomy/rainbow.html (relevance: 0)
+2025-04-04 21:50:54,792 - research.ollama_client - ERROR - Failed to parse content analysis as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 21:50:54,794 - research.engine - INFO - Skipping low-relevance source: https://en.wikipedia.org/wiki/Rainbow (relevance: 0)
+2025-04-04 21:51:40,515 - utils.pdf_generator - INFO - Generated PDF report using ReportLab: reports/what_is_a_rainbow__20250404_215140.pdf
+2025-04-04 21:55:25,180 - __main__ - INFO - Initializing Research Engine
+2025-04-04 21:55:25,180 - __main__ - INFO - Starting CLI interface
+2025-04-04 22:00:02,603 - __main__ - INFO - Initializing Research Engine
+2025-04-04 22:00:02,603 - __main__ - INFO - Starting CLI interface
+2025-04-04 22:00:13,903 - research.engine - INFO - Starting research on topic: what is rainbow formed?
+2025-04-04 22:00:31,283 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 22:00:31,289 - research.engine - INFO - Starting research on topic: what is rainbow formed?
+2025-04-04 22:00:43,121 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 22:00:43,123 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 22:00:47,423 - research.web_search - INFO - Found 5 results from tavily
+2025-04-04 22:00:47,423 - research.web_search - INFO - Completed search for query: what is rainbow formed?
+2025-04-04 22:00:47,424 - research.web_search - INFO - Selected 5 unique URLs for content fetching
+2025-04-04 22:00:47,789 - research.web_search - INFO - Successfully fetched content from https://www.britannica.com/science/rainbow-atmospheric-phenomenon
+2025-04-04 22:00:47,983 - research.web_search - INFO - Successfully fetched content from https://eartheclipse.com/science/geography/how-do-rainbows-form.html
+2025-04-04 22:00:48,551 - research.web_search - INFO - Successfully fetched content from https://www.cnn.com/2025/04/03/science/video/rainbow-science-explained-digvid
+2025-04-04 22:00:48,903 - research.web_search - INFO - Successfully fetched content from https://scijinks.gov/rainbow/
+2025-04-04 22:00:49,107 - research.web_search - INFO - Successfully fetched content from https://science.howstuffworks.com/nature/climate-weather/atmospheric/question41.htm
+2025-04-04 22:01:06,359 - research.ollama_client - ERROR - Failed to parse content analysis as JSON on attempt 1
+2025-04-04 22:01:06,360 - research.ollama_client - WARNING - Retrying content analysis in 2 seconds
+2025-04-04 22:01:07,819 - research.ollama_client - ERROR - Failed to parse content analysis as JSON on attempt 1
+2025-04-04 22:01:07,820 - research.ollama_client - WARNING - Retrying content analysis in 2 seconds
+2025-04-04 22:01:08,735 - research.engine - INFO - Analyzed source: https://www.britannica.com/science/rainbow-atmospheric-phenomenon (relevance: 0.8)
+2025-04-04 22:01:27,378 - research.engine - INFO - Analyzed source: https://eartheclipse.com/science/geography/how-do-rainbows-form.html (relevance: 0.9)
+2025-04-04 22:01:36,075 - research.engine - INFO - Analyzed source: https://www.cnn.com/2025/04/03/science/video/rainbow-science-explained-digvid (relevance: 0.9)
+2025-04-04 22:01:36,468 - research.engine - INFO - Analyzed source: https://scijinks.gov/rainbow/ (relevance: 0.9)
+2025-04-04 22:01:37,072 - research.engine - INFO - Analyzed source: https://science.howstuffworks.com/nature/climate-weather/atmospheric/question41.htm (relevance: 0.9)
+2025-04-04 22:02:36,181 - utils.pdf_generator - ERROR - Error generating PDF with ReportLab: 
+paragraph text '<para><a href="<a href="https://eartheclipse.com/science/geography/how-do-rainbows-form.html"">https://eartheclipse.com/science/geography/how-do-rainbows-form.html"</a>>Eartheclipse</a></para>' caused exception paraparser: syntax error: invalid attribute name https: attrMap=['backColor', 'backcolor', 'bgcolor', 'color', 'dest', 'destination', 'face', 'fg', 'fontName', 'fontSize', 'fontname', 'fontsize', 'href', 'link', 'name', 'size', 'target', 'textColor', 'textcolor', 'ucolor', 'ugap', 'ukind', 'underline', 'underlineColor', 'underlineGap', 'underlineKind', 'underlineOffset', 'underlineWidth', 'underlinecolor', 'underlinegap', 'underlinekind', 'underlineoffset', 'underlinewidth', 'uoffset', 'uwidth']
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 3217, in parse
+    self.feed(text)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.2_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/html/parser.py", line 111, in feed
+    self.goahead(0)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.2_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/html/parser.py", line 171, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.2_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/html/parser.py", line 338, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 3240, in handle_starttag
+    start(attrs or {})
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 2686, in start_a
+    self._handle_link('a',attributes)
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 2653, in _handle_link
+    A = self.getAttributes(attributes,_linkAttrMap)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 3080, in getAttributes
+    self._syntax_error('invalid attribute name %s attrMap=%r'% (k,list(sorted(attrMap.keys()))))
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 2779, in _syntax_error
+    raise ValueError('paraparser: syntax error: %s' % message)
+ValueError: paraparser: syntax error: invalid attribute name https: attrMap=['backColor', 'backcolor', 'bgcolor', 'color', 'dest', 'destination', 'face', 'fg', 'fontName', 'fontSize', 'fontname', 'fontsize', 'href', 'link', 'name', 'size', 'target', 'textColor', 'textcolor', 'ucolor', 'ugap', 'ukind', 'underline', 'underlineColor', 'underlineGap', 'underlineKind', 'underlineOffset', 'underlineWidth', 'underlinecolor', 'underlinegap', 'underlinekind', 'underlineoffset', 'underlinewidth', 'uoffset', 'uwidth']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 103, in generate_pdf
+    self._generate_with_reportlab(research_data, filepath)
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 205, in _generate_with_reportlab
+    content.extend(self._convert_markdown_to_reportlab(report, styles))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 294, in _convert_markdown_to_reportlab
+    current_list_items.append(ListItem(Paragraph(item_text, styles['CustomBodyText'])))
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paragraph.py", line 1814, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paragraph.py", line 1835, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 3219, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 3217, in parse
+    self.feed(text)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.2_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/html/parser.py", line 111, in feed
+    self.goahead(0)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.2_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/html/parser.py", line 171, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.2_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/html/parser.py", line 338, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 3240, in handle_starttag
+    start(attrs or {})
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 2686, in start_a
+    self._handle_link('a',attributes)
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 2653, in _handle_link
+    A = self.getAttributes(attributes,_linkAttrMap)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 3080, in getAttributes
+    self._syntax_error('invalid attribute name %s attrMap=%r'% (k,list(sorted(attrMap.keys()))))
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/reportlab/platypus/paraparser.py", line 2779, in _syntax_error
+    raise ValueError('paraparser: syntax error: %s' % message)
+ValueError: 
+paragraph text '<para><a href="<a href="https://eartheclipse.com/science/geography/how-do-rainbows-form.html"">https://eartheclipse.com/science/geography/how-do-rainbows-form.html"</a>>Eartheclipse</a></para>' caused exception paraparser: syntax error: invalid attribute name https: attrMap=['backColor', 'backcolor', 'bgcolor', 'color', 'dest', 'destination', 'face', 'fg', 'fontName', 'fontSize', 'fontname', 'fontsize', 'href', 'link', 'name', 'size', 'target', 'textColor', 'textcolor', 'ucolor', 'ugap', 'ukind', 'underline', 'underlineColor', 'underlineGap', 'underlineKind', 'underlineOffset', 'underlineWidth', 'underlinecolor', 'underlinegap', 'underlinekind', 'underlineoffset', 'underlinewidth', 'uoffset', 'uwidth']
+2025-04-04 22:02:36,193 - utils.pdf_generator - WARNING - ReportLab generation failed. Attempting fallback with FPDF.
+2025-04-04 22:02:36,196 - utils.pdf_generator - ERROR - Error generating PDF with FPDF: 'latin-1' codec can't encode character '\u2022' in position 1163: ordinal not in range(256)
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 117, in generate_pdf
+    self._generate_with_fpdf(research_data, filepath)
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 384, in _generate_with_fpdf
+    pdf.output(filepath)
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/fpdf/fpdf.py", line 1065, in output
+    self.close()
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/fpdf/fpdf.py", line 246, in close
+    self._enddoc()
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/fpdf/fpdf.py", line 1636, in _enddoc
+    self._putpages()
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/fpdf/fpdf.py", line 1170, in _putpages
+    p = self.pages[n].encode("latin1") if PY3K else self.pages[n]
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u2022' in position 1163: ordinal not in range(256)
+2025-04-04 22:02:36,199 - ui.cli - ERROR - Error in CLI: 'latin-1' codec can't encode character '\u2022' in position 1163: ordinal not in range(256)
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/ui/cli.py", line 60, in start
+    self._execute_research(topic, context)
+  File "/Users/parasgupta/deep-research-new/ui/cli.py", line 177, in _execute_research
+    self._display_research_results(self.current_research)
+  File "/Users/parasgupta/deep-research-new/ui/cli.py", line 208, in _display_research_results
+    pdf_path = self._generate_pdf_report(research_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/cli.py", line 221, in _generate_pdf_report
+    pdf_path = self.pdf_generator.generate_pdf(research_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 117, in generate_pdf
+    self._generate_with_fpdf(research_data, filepath)
+  File "/Users/parasgupta/deep-research-new/utils/pdf_generator.py", line 384, in _generate_with_fpdf
+    pdf.output(filepath)
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/fpdf/fpdf.py", line 1065, in output
+    self.close()
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/fpdf/fpdf.py", line 246, in close
+    self._enddoc()
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/fpdf/fpdf.py", line 1636, in _enddoc
+    self._putpages()
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/fpdf/fpdf.py", line 1170, in _putpages
+    p = self.pages[n].encode("latin1") if PY3K else self.pages[n]
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u2022' in position 1163: ordinal not in range(256)
+2025-04-04 22:08:00,624 - __main__ - INFO - Initializing Research Engine
+2025-04-04 22:08:00,624 - __main__ - INFO - Starting CLI interface
+2025-04-04 22:08:09,652 - research.engine - INFO - Starting research on topic: why is rainbow formed?
+2025-04-04 22:08:28,582 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 22:08:28,587 - research.engine - INFO - Starting research on topic: why is rainbow formed?
+2025-04-04 22:08:43,408 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 22:08:43,409 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 22:08:51,194 - research.web_search - INFO - Found 5 results from tavily
+2025-04-04 22:08:51,195 - research.web_search - INFO - Completed search for query: why is rainbow formed?
+2025-04-04 22:08:51,195 - research.web_search - INFO - Selected 5 unique URLs for content fetching
+2025-04-04 22:08:51,323 - research.web_search - INFO - Successfully fetched content from https://science.howstuffworks.com/nature/climate-weather/atmospheric/question41.htm
+2025-04-04 22:08:51,736 - research.web_search - INFO - Successfully fetched content from https://eartheclipse.com/science/geography/how-do-rainbows-form.html
+2025-04-04 22:08:52,343 - research.web_search - INFO - Successfully fetched content from https://www.skyatnightmagazine.com/space-science/what-causes-rainbow
+2025-04-04 22:08:52,348 - research.web_search - INFO - Successfully fetched content from https://scijinks.gov/rainbow/
+2025-04-04 22:08:52,398 - research.web_search - INFO - Successfully fetched content from https://www.cnn.com/2025/04/03/science/video/rainbow-science-explained-digvid
+2025-04-04 22:09:19,141 - research.engine - INFO - Analyzed source: https://science.howstuffworks.com/nature/climate-weather/atmospheric/question41.htm (relevance: 0.9)
+2025-04-04 22:09:22,282 - research.engine - INFO - Analyzed source: https://www.skyatnightmagazine.com/space-science/what-causes-rainbow (relevance: 0.9)
+2025-04-04 22:09:26,929 - research.engine - INFO - Analyzed source: https://scijinks.gov/rainbow/ (relevance: 0.9)
+2025-04-04 22:09:27,223 - research.engine - INFO - Analyzed source: https://eartheclipse.com/science/geography/how-do-rainbows-form.html (relevance: 0.9)
+2025-04-04 22:09:32,052 - research.engine - INFO - Analyzed source: https://www.cnn.com/2025/04/03/science/video/rainbow-science-explained-digvid (relevance: 0.8)
+2025-04-04 22:10:25,992 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://science.howstuffworks.com/nature/climate-weather/atmospheric/question41.htm"><a href="https://science.howstuffworks.com/nature/climate-weather/atmospheric/question41.htm</a">https://science.howstuffworks.com/nature/climate-weather/atmospheric/question41.htm</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:10:25,993 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.skyatnightmagazine.com/space-science/what-causes-rainbow"><a href="https://www.skyatnightmagazine.com/space-science/what-causes-rainbow</a">https://www.skyatnightmagazine.com/space-science/what-causes-rainbow</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:10:25,993 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://scijinks.gov/rainbow/"><a href="https://scijinks.gov/rainbow/</a">https://scijinks.gov/rainbow/</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:10:25,993 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://eartheclipse.com/science/geography/how-do-rainbows-form.html"><a href="https://eartheclipse.com/science/geography/how-do-rainbows-form.html</a">https://eartheclipse.com/science/geography/how-do-rainbows-form.html</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:10:25,993 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.cnn.com/2025/04/03/science/video/rainbow-science-explained-digvid"><a href="https://www.cnn.com/2025/04/03/science/video/rainbow-science-explained-digvid</a">https://www.cnn.com/2025/04/03/science/video/rainbow-science-explained-digvid</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:10:26,016 - utils.pdf_generator - INFO - Generated PDF report using ReportLab: reports/why_is_rainbow_formed__20250404_221025.pdf
+2025-04-04 22:11:14,978 - __main__ - INFO - Initializing Research Engine
+2025-04-04 22:11:14,978 - __main__ - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 22:11:14,978 - ui.web_interface - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 22:11:15,015 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-04 22:11:15,015 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-04 22:11:52,780 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 22:11:52,785 - ui.web.app - ERROR - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 22:11:52,790 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:11:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-04 22:11:52,830 - werkzeug - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/werkzeug/serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/app.py", line 860, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 32, in internal_error
+    return render_template('error.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/error.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/deep-research-new/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 22:15:06,942 - __main__ - INFO - Initializing Research Engine
+2025-04-04 22:15:06,962 - __main__ - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 22:15:06,962 - ui.web_interface - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 22:15:06,985 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-04 22:15:06,985 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-04 22:15:21,232 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:21] "GET / HTTP/1.1" 200 -
+2025-04-04 22:15:21,257 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:21] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-04 22:15:21,258 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:21] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-04 22:15:28,603 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:28] "GET /research HTTP/1.1" 200 -
+2025-04-04 22:15:28,617 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:15:28,617 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:15:42,502 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:42] "[32mPOST /research HTTP/1.1[0m" 302 -
+2025-04-04 22:15:42,513 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:42] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:15:42,525 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:15:42,530 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:15:42,541 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:42] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:15:47,560 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:47] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:15:47,577 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:15:47,577 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:15:47,583 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:47] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:15:52,611 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:52] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:15:52,625 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:15:52,625 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:15:52,632 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:52] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:15:57,659 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:57] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:15:57,680 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:15:57,681 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:15:57,687 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:15:57] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:16:02,710 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:02] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:16:02,719 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:16:02,721 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:16:02,727 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:02] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:16:07,744 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:07] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:16:07,760 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:16:07,762 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:16:07,766 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:07] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:16:12,793 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:12] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:16:12,806 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:16:12,807 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:16:12,811 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:12] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:16:17,833 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:17] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:16:17,844 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:16:17,845 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:16:17,849 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:17] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:16:22,873 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:22] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:16:22,888 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:16:22,889 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:16:22,899 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:22] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:16:27,921 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:27] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:16:27,935 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:16:27,936 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:16:27,948 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:27] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:16:32,972 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:32] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:16:32,987 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:16:32,987 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:16:32,998 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:32] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:16:38,021 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:38] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:16:38,036 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:16:38,036 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:16:38,047 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:38] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:16:43,070 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:43] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:16:43,085 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:16:43,086 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:16:43,098 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:43] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:16:48,115 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:48] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:16:48,130 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:16:48,130 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:16:48,134 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:48] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:16:53,159 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:53] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:16:53,173 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:16:53,177 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:16:53,184 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:53] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:16:58,208 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:58] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:16:58,224 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:16:58,229 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:16:58,235 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:16:58] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:17:03,258 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:03] "GET /research/1743785142 HTTP/1.1" 200 -
+2025-04-04 22:17:03,280 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:17:03,281 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:17:03,285 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:03] "GET /api/research/1743785142/status HTTP/1.1" 200 -
+2025-04-04 22:17:07,401 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:07] "GET / HTTP/1.1" 200 -
+2025-04-04 22:17:07,420 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:17:07,421 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:17:13,998 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:13] "GET /research HTTP/1.1" 200 -
+2025-04-04 22:17:14,016 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:17:14,019 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:17:16,567 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:16] "GET /about HTTP/1.1" 200 -
+2025-04-04 22:17:16,583 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:17:16,587 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:17:23,118 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:23] "GET /research HTTP/1.1" 200 -
+2025-04-04 22:17:23,136 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:17:23,140 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:17:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:18:23,441 - __main__ - INFO - Initializing Research Engine
+2025-04-04 22:18:23,460 - __main__ - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 22:18:23,460 - ui.web_interface - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 22:18:23,478 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-04 22:18:23,478 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-04 22:18:29,363 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:29] "GET / HTTP/1.1" 200 -
+2025-04-04 22:18:29,387 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:18:29,388 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:18:31,072 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:31] "GET /research HTTP/1.1" 200 -
+2025-04-04 22:18:31,088 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:18:31,090 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:18:33,680 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:33] "GET /research HTTP/1.1" 200 -
+2025-04-04 22:18:33,710 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:18:33,723 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:18:45,412 - ui.web.app - INFO - Starting research planning for topic: why is human living
+2025-04-04 22:18:45,414 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:45] "[32mPOST /research HTTP/1.1[0m" 302 -
+2025-04-04 22:18:45,414 - research.engine - INFO - Starting research on topic: why is human living
+2025-04-04 22:18:45,424 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:45] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:18:45,440 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:18:45,447 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:18:45,507 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:45] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:18:47,542 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:47] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:18:49,599 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:49] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:18:50,606 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:50] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:18:50,720 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:18:50,721 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:18:50,731 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:50] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:18:52,828 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:52] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:18:54,835 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:54] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:18:55,838 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:55] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:18:55,868 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:18:55,868 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:18:55,877 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:55] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:18:57,914 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:57] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:18:59,927 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:18:59] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:00,920 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:00] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:19:00,964 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:19:00,965 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:19:00,985 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:00] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:03,017 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:03] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:05,025 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:05] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:06,023 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:06] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:19:06,055 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:19:06,057 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:19:06,066 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:06] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:08,093 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:08] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:10,104 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:10] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:11,125 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:11] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:19:11,163 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:19:11,164 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:19:11,182 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:11] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:12,248 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 22:19:12,248 - ui.web.app - INFO - Research plan generated for topic: why is human living
+2025-04-04 22:19:12,249 - ui.web.app - INFO - Starting research execution for topic: why is human living
+2025-04-04 22:19:12,249 - research.engine - INFO - Starting research on topic: why is human living
+2025-04-04 22:19:13,207 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:13] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:15,219 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:15] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:16,225 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:16] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:19:16,252 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:19:16,252 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:19:16,260 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:16] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:18,299 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:18] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:20,308 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:20] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:21,313 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:21] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:19:21,352 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:19:21,354 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:19:21,360 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:21] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:23,382 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:23] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:25,395 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:25] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:26,401 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:26] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:19:26,527 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:19:26,531 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:19:26,551 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:26] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:28,573 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:28] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:28,950 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 22:19:28,950 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 22:19:30,582 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:30] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:31,575 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:31] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:19:31,603 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:19:31,604 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:19:31,609 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:31] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:33,630 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:33] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:35,640 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:35] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:36,635 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:36] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:19:36,652 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:19:36,652 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:19:36,658 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:36] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:37,419 - research.web_search - INFO - Found 5 results from tavily
+2025-04-04 22:19:37,421 - research.web_search - INFO - Completed search for query: why is human living
+2025-04-04 22:19:37,421 - research.web_search - INFO - Selected 5 unique URLs for content fetching
+2025-04-04 22:19:37,641 - research.web_search - INFO - Successfully fetched content from https://bigthink.com/thinking/value-human-life/
+2025-04-04 22:19:38,490 - research.web_search - INFO - Successfully fetched content from https://www.npr.org/sections/13.7/2013/06/18/193084099/does-life-have-a-purpose
+2025-04-04 22:19:38,677 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:38] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:40,683 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:40] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:41,192 - research.web_search - INFO - Successfully fetched content from https://www.psychologytoday.com/us/blog/tech-happy-life/202010/what-is-the-purpose-of-life
+2025-04-04 22:19:41,193 - research.web_search - INFO - Successfully fetched content from https://www.psychologytoday.com/us/blog/hot-thought/201002/what-makes-life-worth-living
+2025-04-04 22:19:41,683 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:41] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:19:41,696 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:19:41,696 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:19:41,701 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:41] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:42,102 - research.web_search - INFO - Successfully fetched content from https://historycollection.com/what-is-the-meaning-of-life-40-philosophers-and-faiths-tell-us-why-we-exist/
+2025-04-04 22:19:43,729 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:43] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:45,741 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:45] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:46,751 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:46] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:19:46,788 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:19:46,788 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:19:46,792 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:46] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:48,825 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:48] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:50,847 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:50] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:51,831 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:51] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:19:51,859 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:19:51,861 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:19:51,871 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:51] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:53,900 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:53] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:55,907 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:55] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:56,913 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:56] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:19:56,941 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:19:56,942 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:19:56,950 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:56] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:19:58,991 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:19:58] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:01,005 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:01] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:01,998 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:01] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:20:02,040 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:20:02,041 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:20:02,048 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:02] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:04,090 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:04] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:06,112 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:06] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:06,935 - research.engine - INFO - Analyzed source: https://www.npr.org/sections/13.7/2013/06/18/193084099/does-life-have-a-purpose (relevance: 0.8)
+2025-04-04 22:20:07,168 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:07] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:20:07,266 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:20:07,266 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:20:07,308 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:07] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:08,924 - research.engine - INFO - Analyzed source: https://www.psychologytoday.com/us/blog/hot-thought/201002/what-makes-life-worth-living (relevance: 0.8)
+2025-04-04 22:20:09,351 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:09] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:11,350 - research.engine - INFO - Analyzed source: https://www.psychologytoday.com/us/blog/tech-happy-life/202010/what-is-the-purpose-of-life (relevance: 0.9)
+2025-04-04 22:20:11,402 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:11] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:12,383 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:12] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:20:12,414 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:20:12,423 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:20:12,430 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:12] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:14,454 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:14] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:14,849 - research.engine - INFO - Analyzed source: https://bigthink.com/thinking/value-human-life/ (relevance: 0.8)
+2025-04-04 22:20:16,465 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:16] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:17,468 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:17] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:20:17,504 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:20:17,505 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:20:17,514 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:17] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:19,547 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:19] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:21,576 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:21] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:21,976 - research.engine - INFO - Analyzed source: https://historycollection.com/what-is-the-meaning-of-life-40-philosophers-and-faiths-tell-us-why-we-exist/ (relevance: 0.5)
+2025-04-04 22:20:22,616 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:22] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:20:22,690 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:20:22,692 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:20:22,704 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:22] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:24,765 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:24] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:26,785 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:26] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:27,807 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:27] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:20:27,889 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:20:27,892 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:20:27,900 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:27] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:29,965 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:29] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:31,984 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:31] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:33,017 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:33] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:20:33,100 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:20:33,100 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:20:33,131 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:33] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:35,163 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:35] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:37,180 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:37] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:38,179 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:38] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:20:38,214 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:20:38,215 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:20:38,229 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:38] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:40,262 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:40] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:42,278 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:42] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:43,284 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:43] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:20:43,336 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:20:43,336 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:20:43,343 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:43] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:45,368 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:45] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:47,378 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:47] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:48,383 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:48] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:20:48,423 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:20:48,423 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:20:48,432 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:48] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:50,470 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:50] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:52,481 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:52] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:53,490 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:53] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:20:53,525 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:20:53,525 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:20:53,533 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:53] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:55,662 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:55] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:57,707 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:57] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:20:58,665 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:58] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:20:58,774 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:20:58,774 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:20:58,789 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:20:58] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:00,876 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:00] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:02,902 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:02] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:03,949 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:03] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:21:04,053 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:21:04,057 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:21:04,088 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:04] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:06,142 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:06] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:08,160 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:08] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:09,224 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:09] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:21:09,320 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:21:09,321 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:21:09,332 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:09] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:10,344 - ui.web.app - INFO - Research completed for topic: why is human living
+2025-04-04 22:21:10,344 - ui.web.app - INFO - Research task completed for topic: why is human living
+2025-04-04 22:21:11,416 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:11] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:14,407 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:14] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:21:14,433 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:21:14,434 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:21:14,443 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:14] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:19,465 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:19] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:21:19,479 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:21:19,479 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:21:19,486 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:19] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:24,520 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:24] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:21:24,535 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:21:24,535 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:21:24,544 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:24] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:29,575 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:29] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:21:29,585 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:21:29,585 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:21:29,594 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:29] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:34,615 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:34] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:21:34,636 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:21:34,636 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:21:34,644 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:34] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:39,669 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:39] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:21:39,683 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:21:39,683 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:21:39,695 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:39] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:44,714 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:44] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:21:44,734 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:21:44,736 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:21:44,745 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:44] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:49,763 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:49] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:21:49,776 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:21:49,777 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:21:49,783 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:49] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:54,808 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:54] "GET /research/1743785325 HTTP/1.1" 200 -
+2025-04-04 22:21:54,825 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:21:54,829 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:21:54,833 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:54] "GET /api/research/1743785325/status HTTP/1.1" 200 -
+2025-04-04 22:21:57,316 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:57] "GET /research/1743785325/report HTTP/1.1" 200 -
+2025-04-04 22:21:57,346 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:21:57,348 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:21:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:22:07,713 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.psychologytoday.com/us/blog/tech-happy-life/202010/what-is-the-purpose-of-life">Source 1: <a href="https://www.psychologytoday.com/us/blog/tech-happy-life/202010/what-is-the-purpose-of-life</a">https://www.psychologytoday.com/us/blog/tech-happy-life/202010/what-is-the-purpose-of-life</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:22:07,713 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.npr.org/sections/13.7/2013/06/18/193084099/does-life-have-a-purpose">Source 2: <a href="https://www.npr.org/sections/13.7/2013/06/18/193084099/does-life-have-a-purpose</a">https://www.npr.org/sections/13.7/2013/06/18/193084099/does-life-have-a-purpose</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:22:07,714 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.psychologytoday.com/us/blog/hot-thought/201002/what-makes-life-worth-living">Source 3: <a href="https://www.psychologytoday.com/us/blog/hot-thought/201002/what-makes-life-worth-living</a">https://www.psychologytoday.com/us/blog/hot-thought/201002/what-makes-life-worth-living</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:22:07,714 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://bigthink.com/thinking/value-human-life/">Source 4: <a href="https://bigthink.com/thinking/value-human-life/</a">https://bigthink.com/thinking/value-human-life/</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:22:07,714 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://historycollection.com/what-is-the-meaning-of-life-40-philosophers-and-faiths-tell-us-why-we-exist/">Source 5: <a href="https://historycollection.com/what-is-the-meaning-of-life-40-philosophers-and-faiths-tell-us-why-we-exist/</a">https://historycollection.com/what-is-the-meaning-of-life-40-philosophers-and-faiths-tell-us-why-we-exist/</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:22:07,736 - utils.pdf_generator - INFO - Generated PDF report using ReportLab: reports/why_is_human_living_20250404_222207.pdf
+2025-04-04 22:22:07,738 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:22:07] "[33mGET /research/1743785325/pdf HTTP/1.1[0m" 404 -
+2025-04-04 22:22:07,750 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:22:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:22:07,751 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:22:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:22:15,830 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:22:15] "GET / HTTP/1.1" 200 -
+2025-04-04 22:22:15,850 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:22:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:22:15,850 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:22:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:23:03,657 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.psychologytoday.com/us/blog/tech-happy-life/202010/what-is-the-purpose-of-life">Source 1: <a href="https://www.psychologytoday.com/us/blog/tech-happy-life/202010/what-is-the-purpose-of-life</a">https://www.psychologytoday.com/us/blog/tech-happy-life/202010/what-is-the-purpose-of-life</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:23:03,658 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.npr.org/sections/13.7/2013/06/18/193084099/does-life-have-a-purpose">Source 2: <a href="https://www.npr.org/sections/13.7/2013/06/18/193084099/does-life-have-a-purpose</a">https://www.npr.org/sections/13.7/2013/06/18/193084099/does-life-have-a-purpose</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:23:03,659 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.psychologytoday.com/us/blog/hot-thought/201002/what-makes-life-worth-living">Source 3: <a href="https://www.psychologytoday.com/us/blog/hot-thought/201002/what-makes-life-worth-living</a">https://www.psychologytoday.com/us/blog/hot-thought/201002/what-makes-life-worth-living</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:23:03,659 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://bigthink.com/thinking/value-human-life/">Source 4: <a href="https://bigthink.com/thinking/value-human-life/</a">https://bigthink.com/thinking/value-human-life/</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:23:03,659 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://historycollection.com/what-is-the-meaning-of-life-40-philosophers-and-faiths-tell-us-why-we-exist/">Source 5: <a href="https://historycollection.com/what-is-the-meaning-of-life-40-philosophers-and-faiths-tell-us-why-we-exist/</a">https://historycollection.com/what-is-the-meaning-of-life-40-philosophers-and-faiths-tell-us-why-we-exist/</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:23:03,681 - utils.pdf_generator - INFO - Generated PDF report using ReportLab: reports/why_is_human_living_20250404_222303.pdf
+2025-04-04 22:23:03,682 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:23:03] "[33mGET /research/1743785325/pdf HTTP/1.1[0m" 404 -
+2025-04-04 22:23:03,697 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:23:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:23:03,698 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:23:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:23:31,121 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.psychologytoday.com/us/blog/tech-happy-life/202010/what-is-the-purpose-of-life">Source 1: <a href="https://www.psychologytoday.com/us/blog/tech-happy-life/202010/what-is-the-purpose-of-life</a">https://www.psychologytoday.com/us/blog/tech-happy-life/202010/what-is-the-purpose-of-life</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:23:31,121 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.npr.org/sections/13.7/2013/06/18/193084099/does-life-have-a-purpose">Source 2: <a href="https://www.npr.org/sections/13.7/2013/06/18/193084099/does-life-have-a-purpose</a">https://www.npr.org/sections/13.7/2013/06/18/193084099/does-life-have-a-purpose</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:23:31,122 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.psychologytoday.com/us/blog/hot-thought/201002/what-makes-life-worth-living">Source 3: <a href="https://www.psychologytoday.com/us/blog/hot-thought/201002/what-makes-life-worth-living</a">https://www.psychologytoday.com/us/blog/hot-thought/201002/what-makes-life-worth-living</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:23:31,122 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://bigthink.com/thinking/value-human-life/">Source 4: <a href="https://bigthink.com/thinking/value-human-life/</a">https://bigthink.com/thinking/value-human-life/</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:23:31,122 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://historycollection.com/what-is-the-meaning-of-life-40-philosophers-and-faiths-tell-us-why-we-exist/">Source 5: <a href="https://historycollection.com/what-is-the-meaning-of-life-40-philosophers-and-faiths-tell-us-why-we-exist/</a">https://historycollection.com/what-is-the-meaning-of-life-40-philosophers-and-faiths-tell-us-why-we-exist/</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:23:31,145 - utils.pdf_generator - INFO - Generated PDF report using ReportLab: reports/why_is_human_living_20250404_222331.pdf
+2025-04-04 22:23:31,146 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:23:31] "[33mGET /research/1743785325/pdf HTTP/1.1[0m" 404 -
+2025-04-04 22:23:31,161 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:23:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:23:31,165 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:23:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:27:23,261 - __main__ - INFO - Initializing Research Engine
+2025-04-04 22:27:23,280 - __main__ - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 22:27:23,280 - ui.web_interface - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 22:27:23,307 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-04 22:27:23,307 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-04 22:27:29,892 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:29] "[33mGET /research/1743785325/report HTTP/1.1[0m" 404 -
+2025-04-04 22:27:29,914 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:29] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-04 22:27:29,917 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:27:31,907 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:31] "GET / HTTP/1.1" 200 -
+2025-04-04 22:27:31,917 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:27:31,918 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:27:33,752 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:33] "GET /research HTTP/1.1" 200 -
+2025-04-04 22:27:33,770 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:27:33,770 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:27:42,850 - ui.web.app - INFO - Starting research planning for topic: why is rule606 in us
+2025-04-04 22:27:42,851 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:42] "[32mPOST /research HTTP/1.1[0m" 302 -
+2025-04-04 22:27:42,851 - research.engine - INFO - Starting research on topic: why is rule606 in us
+2025-04-04 22:27:42,861 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:42] "GET /research/1743785862 HTTP/1.1" 200 -
+2025-04-04 22:27:42,877 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:27:42,882 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:27:43,394 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:43] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:27:45,456 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:45] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:27:47,475 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:47] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:27:49,483 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:49] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:27:51,491 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:51] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:27:53,501 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:53] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:27:55,508 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:55] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:27:56,412 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 22:27:56,413 - ui.web.app - INFO - Research plan generated for topic: why is rule606 in us
+2025-04-04 22:27:56,413 - ui.web.app - INFO - Starting research execution for topic: why is rule606 in us
+2025-04-04 22:27:56,413 - research.engine - INFO - Starting research on topic: why is rule606 in us
+2025-04-04 22:27:57,516 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:27:57] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:00,537 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:00] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:03,566 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:03] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:06,584 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:06] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:09,600 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:09] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:10,461 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 22:28:10,462 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 22:28:12,623 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:12] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:12,944 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:12] "GET /research/1743785862 HTTP/1.1" 200 -
+2025-04-04 22:28:13,011 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:28:13,013 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:28:13,522 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:13] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:16,043 - research.web_search - INFO - Found 5 results from tavily
+2025-04-04 22:28:16,044 - research.web_search - INFO - Completed search for query: why is rule606 in us
+2025-04-04 22:28:16,044 - research.web_search - INFO - Selected 5 unique URLs for content fetching
+2025-04-04 22:28:16,532 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:16] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:17,221 - research.web_search - INFO - Successfully fetched content from https://www.finra.org/finra-data/about-606
+2025-04-04 22:28:17,867 - research.web_search - INFO - Successfully fetched content from https://webupon.com/blog/what-is-under-rule-606-of-regulation-nms-if-requested-by-a-customer/
+2025-04-04 22:28:18,142 - research.web_search - ERROR - Error fetching https://www.sec.gov/rules-regulations/staff-guidance/trading-markets-frequently-asked-questions/faq-rule-606-regulation: 403 Client Error: Forbidden for url: https://www.sec.gov/rules-regulations/staff-guidance/trading-markets-frequently-asked-questions/faq-rule-606-regulation
+2025-04-04 22:28:18,143 - research.web_search - WARNING - No content fetched from https://www.sec.gov/rules-regulations/staff-guidance/trading-markets-frequently-asked-questions/faq-rule-606-regulation
+2025-04-04 22:28:18,522 - research.web_search - INFO - Successfully fetched content from https://www.finra.org/rules-guidance/guidance/reports/2024-finra-annual-regulatory-oversight-report/disclosure-routing-information
+2025-04-04 22:28:19,457 - research.web_search - INFO - Successfully fetched content from https://clearingcustody.fidelity.com/trade-execution-quality/sec-rule-606
+2025-04-04 22:28:19,539 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:19] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:22,557 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:22] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:25,567 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:25] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:28,583 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:28] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:31,592 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:31] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:34,608 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:34] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:37,625 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:37] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:40,642 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:40] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:43,151 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:43] "GET /research/1743785862 HTTP/1.1" 200 -
+2025-04-04 22:28:43,258 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:28:43,260 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:28:43,763 - research.engine - INFO - Analyzed source: https://clearingcustody.fidelity.com/trade-execution-quality/sec-rule-606 (relevance: 0.8)
+2025-04-04 22:28:43,790 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:43] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:45,667 - research.engine - INFO - Analyzed source: https://webupon.com/blog/what-is-under-rule-606-of-regulation-nms-if-requested-by-a-customer/ (relevance: 0.9)
+2025-04-04 22:28:46,517 - research.engine - INFO - Analyzed source: https://www.finra.org/rules-guidance/guidance/reports/2024-finra-annual-regulatory-oversight-report/disclosure-routing-information (relevance: 0.8)
+2025-04-04 22:28:46,808 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:46] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:48,724 - research.engine - INFO - Analyzed source: https://www.finra.org/finra-data/about-606 (relevance: 0.9)
+2025-04-04 22:28:49,824 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:49] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:52,835 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:52] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:55,878 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:55] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:28:58,913 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:28:58] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:29:01,937 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:01] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:29:04,958 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:04] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:29:07,997 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:07] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:29:11,031 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:11] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:29:13,449 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:13] "GET /research/1743785862 HTTP/1.1" 200 -
+2025-04-04 22:29:13,581 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:29:13,582 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:29:14,112 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:14] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:29:17,131 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:17] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:29:20,151 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:20] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:29:23,186 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:23] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:29:26,203 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:26] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:29:29,217 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:29] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:29:29,335 - ui.web.app - INFO - Research completed for topic: why is rule606 in us
+2025-04-04 22:29:29,335 - ui.web.app - INFO - Research task completed for topic: why is rule606 in us
+2025-04-04 22:29:32,243 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:32] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:29:43,714 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:43] "GET /research/1743785862 HTTP/1.1" 200 -
+2025-04-04 22:29:43,797 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:29:43,799 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:29:44,306 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:29:44] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:30:13,866 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:30:13] "GET /research/1743785862 HTTP/1.1" 200 -
+2025-04-04 22:30:13,887 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:30:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:30:13,888 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:30:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:30:14,405 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:30:14] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:30:43,927 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:30:43] "GET /research/1743785862 HTTP/1.1" 200 -
+2025-04-04 22:30:43,950 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:30:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:30:43,950 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:30:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:30:44,460 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:30:44] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:31:13,985 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:31:13] "GET /research/1743785862 HTTP/1.1" 200 -
+2025-04-04 22:31:14,004 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:31:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:31:14,004 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:31:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:31:14,515 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:31:14] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:31:44,040 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:31:44] "GET /research/1743785862 HTTP/1.1" 200 -
+2025-04-04 22:31:44,058 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:31:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:31:44,063 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:31:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:31:44,574 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:31:44] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:32:14,099 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:32:14] "GET /research/1743785862 HTTP/1.1" 200 -
+2025-04-04 22:32:14,111 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:32:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:32:14,115 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:32:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:32:14,624 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:32:14] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:32:44,153 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:32:44] "GET /research/1743785862 HTTP/1.1" 200 -
+2025-04-04 22:32:44,169 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:32:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:32:44,170 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:32:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:32:44,677 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:32:44] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:33:14,204 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:33:14] "GET /research/1743785862 HTTP/1.1" 200 -
+2025-04-04 22:33:14,221 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:33:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:33:14,222 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:33:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:33:14,738 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:33:14] "GET /api/research/1743785862/status HTTP/1.1" 200 -
+2025-04-04 22:33:30,414 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:33:30] "GET /research/1743785862/report HTTP/1.1" 200 -
+2025-04-04 22:33:30,434 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:33:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:33:30,438 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:33:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:33:36,935 - ui.web.app - INFO - PDF generation requested for task: 1743785862
+2025-04-04 22:33:36,936 - ui.web.app - INFO - Generating PDF for task: 1743785862
+2025-04-04 22:33:36,960 - utils.pdf_generator - INFO - Generated PDF report using ReportLab: reports/why_is_rule606_in_us_20250404_223336.pdf
+2025-04-04 22:33:36,960 - ui.web.app - INFO - PDF generated at path: reports/why_is_rule606_in_us_20250404_223336.pdf
+2025-04-04 22:33:36,960 - ui.web.app - INFO - Serving PDF from directory: /Users/parasgupta/deep-research-new/reports, filename: why_is_rule606_in_us_20250404_223336.pdf
+2025-04-04 22:33:36,961 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:33:36] "GET /research/1743785862/pdf HTTP/1.1" 200 -
+2025-04-04 22:35:47,137 - __main__ - INFO - Initializing Research Engine
+2025-04-04 22:35:47,155 - __main__ - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 22:35:47,155 - ui.web_interface - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 22:35:47,182 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-04 22:35:47,182 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-04 22:35:54,717 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:35:54] "GET /research HTTP/1.1" 200 -
+2025-04-04 22:35:54,744 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:35:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:35:54,744 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:35:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:35:58,297 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:35:58] "GET /research HTTP/1.1" 200 -
+2025-04-04 22:35:58,312 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:35:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:35:58,318 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:35:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:36:53,366 - ui.web.app - INFO - Starting research planning for topic: what are the new regulatory compliance rules coming up in 2025 from sec us?
+2025-04-04 22:36:53,366 - research.engine - INFO - Starting research on topic: what are the new regulatory compliance rules coming up in 2025 from sec us?
+2025-04-04 22:36:53,369 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:36:53] "[32mPOST /research HTTP/1.1[0m" 302 -
+2025-04-04 22:36:53,379 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:36:53] "GET /research/1743786413 HTTP/1.1" 200 -
+2025-04-04 22:36:53,396 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:36:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:36:53,399 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:36:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:36:53,908 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:36:53] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:36:55,934 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:36:55] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:36:57,977 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:36:57] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:36:59,993 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:36:59] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:02,010 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:02] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:04,025 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:04] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:06,042 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:06] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:08,051 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:08] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:10,066 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:10] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:12,074 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:12] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:14,083 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:14] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:16,092 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:16] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:18,098 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:18] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:18,784 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 22:37:18,785 - ui.web.app - INFO - Research plan generated for topic: what are the new regulatory compliance rules coming up in 2025 from sec us?
+2025-04-04 22:37:18,785 - ui.web.app - INFO - Starting research execution for topic: what are the new regulatory compliance rules coming up in 2025 from sec us?
+2025-04-04 22:37:18,785 - research.engine - INFO - Starting research on topic: what are the new regulatory compliance rules coming up in 2025 from sec us?
+2025-04-04 22:37:20,110 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:20] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:23,132 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:23] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:23,552 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:23] "GET /research/1743786413 HTTP/1.1" 200 -
+2025-04-04 22:37:23,718 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:37:23,718 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:37:24,268 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:24] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:27,284 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:27] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:30,300 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:30] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:33,312 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:33] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:34,261 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 22:37:34,261 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 22:37:36,323 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:36] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:37,017 - research.web_search - INFO - Found 5 results from tavily
+2025-04-04 22:37:37,017 - research.web_search - INFO - Completed search for query: what are the new regulatory compliance rules coming up in 2025 from sec us?
+2025-04-04 22:37:37,017 - research.web_search - INFO - Selected 5 unique URLs for content fetching
+2025-04-04 22:37:37,159 - research.web_search - ERROR - Error fetching https://www.sec.gov/newsroom/press-releases/2025-54: 403 Client Error: Forbidden for url: https://www.sec.gov/newsroom/press-releases/2025-54
+2025-04-04 22:37:37,159 - research.web_search - WARNING - No content fetched from https://www.sec.gov/newsroom/press-releases/2025-54
+2025-04-04 22:37:38,412 - research.web_search - INFO - Successfully fetched content from https://drawbridgeco.com/blog/takeaways-from-the-secs-compliance-seminar-what-to-know-for-2025/
+2025-04-04 22:37:38,453 - research.web_search - INFO - Successfully fetched content from https://kpmg.com/us/en/articles/2025/regulatory-recap-march-2025.html
+2025-04-04 22:37:38,511 - research.web_search - INFO - Successfully fetched content from https://www.mossadams.com/articles/2025/03/sec-regulatory-changes-in-2025
+2025-04-04 22:37:39,077 - research.web_search - INFO - Successfully fetched content from https://www.bakertilly.com/insights/sec-announces-fy-2025-examination-priorities
+2025-04-04 22:37:39,335 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:39] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:42,349 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:42] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:45,359 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:45] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:48,378 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:48] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:51,389 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:51] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:53,899 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:53] "GET /research/1743786413 HTTP/1.1" 200 -
+2025-04-04 22:37:53,986 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:37:53,987 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:37:54,500 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:54] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:57,509 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:37:57] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:37:59,084 - research.engine - INFO - Analyzed source: https://www.bakertilly.com/insights/sec-announces-fy-2025-examination-priorities (relevance: 0.9)
+2025-04-04 22:38:00,527 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:00] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:02,191 - research.engine - INFO - Analyzed source: https://www.mossadams.com/articles/2025/03/sec-regulatory-changes-in-2025 (relevance: 0.9)
+2025-04-04 22:38:03,535 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:03] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:06,543 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:06] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:07,404 - research.engine - INFO - Analyzed source: https://drawbridgeco.com/blog/takeaways-from-the-secs-compliance-seminar-what-to-know-for-2025/ (relevance: 0.9)
+2025-04-04 22:38:07,765 - research.engine - INFO - Analyzed source: https://kpmg.com/us/en/articles/2025/regulatory-recap-march-2025.html (relevance: 0.8)
+2025-04-04 22:38:09,550 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:09] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:12,556 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:12] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:15,571 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:15] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:18,581 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:18] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:21,592 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:21] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:24,108 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:24] "GET /research/1743786413 HTTP/1.1" 200 -
+2025-04-04 22:38:24,179 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:38:24,180 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:38:24,701 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:24] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:27,716 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:27] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:30,735 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:30] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:33,755 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:33] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:36,776 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:36] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:39,786 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:39] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:42,793 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:42] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:45,801 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:45] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:48,823 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:48] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:49,373 - ui.web.app - INFO - Research completed for topic: what are the new regulatory compliance rules coming up in 2025 from sec us?
+2025-04-04 22:38:49,374 - ui.web.app - INFO - Research task completed for topic: what are the new regulatory compliance rules coming up in 2025 from sec us?
+2025-04-04 22:38:51,855 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:51] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:54,339 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:54] "GET /research/1743786413 HTTP/1.1" 200 -
+2025-04-04 22:38:54,435 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:38:54,435 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:38:54,953 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:54] "GET /api/research/1743786413/status HTTP/1.1" 200 -
+2025-04-04 22:38:58,027 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:58] "GET /research/1743786413/report HTTP/1.1" 200 -
+2025-04-04 22:38:58,055 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:38:58,059 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:38:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:39:38,821 - ui.web.app - INFO - PDF generation requested for task: 1743786413
+2025-04-04 22:39:38,822 - ui.web.app - INFO - PDF research data structure: dict_keys(['topic', 'context', 'results'])
+2025-04-04 22:39:38,822 - ui.web.app - INFO - Results keys: dict_keys(['report', 'analyzed_sources'])
+2025-04-04 22:39:38,822 - ui.web.app - INFO - Generating PDF for task: 1743786413
+2025-04-04 22:39:38,837 - utils.pdf_generator - WARNING - Error processing paragraph with links: 
+paragraph text '<para>Source 3 <a href="https://drawbridgeco.com/blog/takeaways-from-the-secs-compliance-seminar-what-to-know-for-2025/"><a href="https://drawbridgeco.com/blog/takeaways-from-the-secs-compliance-seminar-what-to-know-for-2025/</a">https://drawbridgeco.com/blog/takeaways-from-the-secs-compliance-seminar-what-to-know-for-2025/</a</a>> highlights the importance of operational resilience, particularly in cybersecurity. Regulators want to ensure that firms have robust policies and procedures in place to mitigate cyber threats.</para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:39:38,838 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.bakertilly.com/insights/sec-announces-fy-2025-examination-priorities"><a href="https://www.bakertilly.com/insights/sec-announces-fy-2025-examination-priorities</a">https://www.bakertilly.com/insights/sec-announces-fy-2025-examination-priorities</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:39:38,841 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://www.mossadams.com/articles/2025/03/sec-regulatory-changes-in-2025"><a href="https://www.mossadams.com/articles/2025/03/sec-regulatory-changes-in-2025</a">https://www.mossadams.com/articles/2025/03/sec-regulatory-changes-in-2025</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:39:38,842 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://drawbridgeco.com/blog/takeaways-from-the-secs-compliance-seminar-what-to-know-for-2025/"><a href="https://drawbridgeco.com/blog/takeaways-from-the-secs-compliance-seminar-what-to-know-for-2025/</a">https://drawbridgeco.com/blog/takeaways-from-the-secs-compliance-seminar-what-to-know-for-2025/</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:39:38,842 - utils.pdf_generator - WARNING - Error processing list item with links: 
+paragraph text '<para><a href="https://kpmg.com/us/en/articles/2025/regulatory-recap-march-2025.html"><a href="https://kpmg.com/us/en/articles/2025/regulatory-recap-march-2025.html</a">https://kpmg.com/us/en/articles/2025/regulatory-recap-march-2025.html</a</a>></para>' caused exception Parse error: saw </para> instead of expected </a>
+2025-04-04 22:39:38,864 - utils.pdf_generator - INFO - Generated PDF report using ReportLab: reports/what_are_the_new_regulatory_compliance_rules_coming_up_in_2025_from_sec_us__20250404_223938.pdf
+2025-04-04 22:39:38,864 - ui.web.app - INFO - PDF generated at path: reports/what_are_the_new_regulatory_compliance_rules_coming_up_in_2025_from_sec_us__20250404_223938.pdf
+2025-04-04 22:39:38,864 - ui.web.app - INFO - Serving PDF from directory: /Users/parasgupta/deep-research-new/reports, filename: what_are_the_new_regulatory_compliance_rules_coming_up_in_2025_from_sec_us__20250404_223938.pdf
+2025-04-04 22:39:38,864 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:39:38] "GET /research/1743786413/pdf HTTP/1.1" 200 -
+2025-04-04 22:40:04,610 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:40:04] "GET /about HTTP/1.1" 200 -
+2025-04-04 22:40:04,623 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:40:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-04 22:40:04,623 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:40:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -

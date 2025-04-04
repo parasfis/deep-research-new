@@ -16,7 +16,7 @@
                 <h2 id="research-topic" class="mb-3">{{ result.topic }}</h2>
                 
                 <div class="report-content mb-4">
-                    {{ result.results.report | safe }}
+                    {{ result.results.report | markdown | safe }}
                 </div>
             </div>
         </div>

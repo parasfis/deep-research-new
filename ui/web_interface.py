@@ -42,4 +42,13 @@ class ResearchWeb:
             debug: Whether to run the server in debug mode.
         """
         logger.info(f"Starting web interface on {host}:{port}")
-        start_web_server(host=host, port=port, debug=debug)
+        
+        # Import here to avoid circular imports
+        from ui.web.app import app
+        import ui.web.app as web_app
+        
+        # Set the research engine - make sure to update the module's global variable
+        web_app.research_engine = self.research_engine
+        
+        # Start the web server
+        app.run(host=host, port=port, debug=debug)

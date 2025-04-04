@@ -41,18 +41,67 @@ body {
     font-size: 1.05rem;
 }
 
-.report-content h1, .report-content h2, .report-content h3 {
+.report-content h1 {
+    font-size: 1.8rem;
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.report-content h2 {
+    font-size: 1.5rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
+    color: #444;
+}
+
+.report-content h3 {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #555;
 }
 
 .report-content p {
     margin-bottom: 1rem;
+    text-align: justify;
 }
 
 .report-content ul, .report-content ol {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     padding-left: 2rem;
+}
+
+.report-content li {
+    margin-bottom: 0.5rem;
+}
+
+.report-content a {
+    color: #0275d8;
+    text-decoration: none;
+    border-bottom: 1px dotted #0275d8;
+}
+
+.report-content a:hover {
+    color: #014c8c;
+    text-decoration: none;
+    border-bottom: 1px solid #014c8c;
+}
+
+.report-content blockquote {
+    border-left: 4px solid #eee;
+    padding-left: 1rem;
+    color: #666;
+    margin: 1rem 0;
+}
+
+.report-content code {
+    background-color: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: monospace;
 }
 
 /* Progress bars */

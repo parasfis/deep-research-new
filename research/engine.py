@@ -84,8 +84,8 @@ class ResearchEngine:
         
         # Generate the final report
         report = self.ollama_client.generate_report(
-            {"sources": analyzed_sources}, 
             topic, 
+            analyzed_sources, 
             context
         )
         

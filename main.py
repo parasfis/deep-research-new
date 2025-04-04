@@ -33,7 +33,7 @@ reports_dir.mkdir(exist_ok=True)
 from research.engine import ResearchEngine
 from ui.cli import ResearchCLI
 from ui.web.app import start_web_server
-from ui.web_interface import ResearchWeb as web_module
+from ui.web_interface import ResearchWeb
 
 
 def main():
@@ -72,7 +72,7 @@ def main():
         if args.web:
             # Start the web interface
             logger.info(f"Starting web interface on {args.host}:{args.port}")
-            web = web_module(research_engine)
+            web = ResearchWeb(research_engine)
             web.start(host=args.host, port=args.port, debug=args.debug)
         else:
             # Start the CLI
