@@ -4,13 +4,16 @@ A Python application that connects to Ollama to perform deep research on any top
 
 ## Features
 
-- Connects to Ollama for LLM capabilities
+- Connects to Ollama for LLM capabilities (supports llama3.2)
 - Performs parallel internet research on any topic
-- Searches multiple engines (Google, DuckDuckGo, Tavily)
+- Searches multiple engines (Google, DuckDuckGo, Tavily, SearX)
 - Interacts with users to gather context and refine research
 - Generates comprehensive research reports
 - Exports reports as downloadable PDF files
 - Provides both CLI and web interfaces
+- Real-time progress tracking with accurate progress bar
+- Markdown formatting in reports with clickable links
+- Error handling and detailed error reporting
 
 ## Requirements
 
@@ -45,16 +48,23 @@ The application can be configured using environment variables or a `.env` file i
 ```
 # Ollama API settings
 OLLAMA_HOST=http://localhost:11434
-OLLAMA_MODEL=llama2
+OLLAMA_MODEL=llama3.2
+OLLAMA_TIMEOUT=240
+
+# Search engine API keys
+TAVILY_API_KEY=your_tavily_api_key_here
+SERPAPI_KEY=your_serpapi_key_here
+SEARX_INSTANCE=https://searx.thegpm.org
 
 # Research settings
-MAX_PARALLEL_SEARCHES=5
+MAX_PARALLEL_SEARCHES=4
 MAX_SOURCES_PER_TOPIC=10
 SEARCH_TIMEOUT=30
+MAX_RESULTS_PER_ENGINE=10
 
 # PDF generation settings
 PDF_AUTHOR="Deep Research Assistant"
-PDF_TITLE_PREFIX="Research Report: "
+PDF_TITLE_PREFIX="Deep Research Report: "
 PDF_OUTPUT_DIR=reports
 ```
 
@@ -91,6 +101,16 @@ Access the web interface by opening the URL in your browser. From there, you can
 3. Monitor research progress in real-time
 4. View and download the generated research report as a PDF
 
+## Recent Improvements
+
+- **Enhanced Web Interface**: Improved research status tracking with accurate progress indicator
+- **Better Error Handling**: Detailed error messages and recovery mechanisms for better user experience
+- **PDF Improvements**: Fixed PDF generation and download, with proper markdown rendering
+- **Markdown Support**: Proper rendering of markdown content in web reports with clickable links
+- **Performance Enhancements**: Optimized search engine utilization and concurrent research execution
+- **Mobile Responsiveness**: Better display on mobile devices and tablets
+- **UI Enhancements**: Cleaner report layout with better typography and spacing
+
 ## Project Structure
 
 ```
@@ -111,13 +131,42 @@ Access the web interface by opening the URL in your browser. From there, you can
 └── ui/                      # User interface
     ├── __init__.py
     ├── cli.py               # Command-line interface
-    ├── web.py               # Web interface initialization
+    ├── web_interface.py     # Web interface initialization
     └── web/                 # Web interface components
         ├── __init__.py
         ├── app.py           # Flask application
         ├── static/          # Static assets (CSS, JS, images)
+        │   ├── css/         # Stylesheets
+        │   └── js/          # JavaScript files
         ├── templates/       # HTML templates
         └── uploads/         # User uploaded files
+```
+
+## Troubleshooting
+
+### Common Issues
+
+- **PDF Download Issues**: If you encounter PDF download problems, ensure the `reports` directory exists and has write permissions.
+- **Connection Errors**: Check that Ollama is running and accessible at the configured host/port.
+- **Search Engine Errors**: Some search engines may require API keys or have usage limits. Configure fallback options in `config.py`.
+
+### Search Engine Configuration
+
+The application supports multiple search engines:
+
+- **Tavily**: Requires an API key from [tavily.com](https://tavily.com). Set the `TAVILY_API_KEY` environment variable.
+- **SerpAPI (Google)**: Requires an API key from [serpapi.com](https://serpapi.com). Set the `SERPAPI_KEY` environment variable.
+- **DuckDuckGo**: No API key required, but may have usage limitations.
+- **SearX**: Uses public or private SearX instances. Set the `SEARX_INSTANCE` environment variable to use a custom instance.
+
+The search engines are tried in the order specified in `config.py`. If a search engine fails or returns no results, the system falls back to the next engine in the list.
+
+### Debug Mode
+
+Run the application in debug mode for more detailed logs:
+
+```bash
+python main.py --web --debug
 ```
 
 ## License

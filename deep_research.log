@@ -2329,3 +2329,5 @@ paragraph text '<para><a href="https://kpmg.com/us/en/articles/2025/regulatory-r
 2025-04-04 22:40:04,610 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:40:04] "GET /about HTTP/1.1" 200 -
 2025-04-04 22:40:04,623 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:40:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
 2025-04-04 22:40:04,623 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:40:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-04 22:44:20,433 - __main__ - INFO - Initializing Research Engine
+2025-04-04 22:44:20,450 - __main__ - INFO - Starting CLI interface

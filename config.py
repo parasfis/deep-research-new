@@ -12,6 +12,11 @@ OLLAMA_MODEL = "llama3.2"
 OLLAMA_TIMEOUT = 240  # Increased from 30 to 60 seconds
 OLLAMA_ENDPOINT = "http://localhost:11434"
 
+# Search engine API keys
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY", "")
+SERPAPI_KEY = os.getenv("SERPAPI_KEY", "")
+SEARX_INSTANCE = os.getenv("SEARX_INSTANCE", "https://searx.thegpm.org")
+
 # Research settings
 MAX_PARALLEL_SEARCHES = int(os.getenv("MAX_PARALLEL_SEARCHES", 4))
 MAX_SOURCES_PER_TOPIC = int(os.getenv("MAX_SOURCES_PER_TOPIC", 10))
@@ -21,7 +26,8 @@ SEARCH_TIMEOUT = 30
 SEARCH_ENGINES = [
     "tavily",  # Primary search engine
     "duckduckgo",  # Fallback
-    "google"  # Fallback
+    "google",  # Fallback
+    "searx"  # Fallback
 ]
 
 # PDF generation settings
