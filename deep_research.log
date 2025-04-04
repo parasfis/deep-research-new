@@ -2331,3 +2331,22 @@ paragraph text '<para><a href="https://kpmg.com/us/en/articles/2025/regulatory-r
 2025-04-04 22:40:04,623 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 22:40:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-04-04 22:44:20,433 - __main__ - INFO - Initializing Research Engine
 2025-04-04 22:44:20,450 - __main__ - INFO - Starting CLI interface
+2025-04-04 22:49:07,868 - research.engine - INFO - Starting research on topic: why llm is going to rule?
+2025-04-04 22:49:26,202 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 22:49:26,215 - research.engine - INFO - Starting research on topic: why llm is going to rule?
+2025-04-04 22:49:42,519 - research.ollama_client - ERROR - Failed to parse research plan as JSON: Expecting value: line 1 column 1 (char 0)
+2025-04-04 22:49:42,520 - research.engine - INFO - Executing 1 parallel searches
+2025-04-04 22:49:45,640 - research.web_search - INFO - Found 5 results from tavily
+2025-04-04 22:49:45,642 - research.web_search - INFO - Completed search for query: why llm is going to rule?
+2025-04-04 22:49:45,642 - research.web_search - INFO - Selected 5 unique URLs for content fetching
+2025-04-04 22:49:46,629 - research.web_search - INFO - Successfully fetched content from https://medium.com/@dallemang/explaining-rules-with-llms-bbf3e96e4018
+2025-04-04 22:49:47,020 - research.web_search - INFO - Successfully fetched content from https://medium.com/@glovguy/large-language-models-and-rule-following-7078253b74cb
+2025-04-04 22:49:47,195 - research.web_search - INFO - Successfully fetched content from https://medium.com/hackrlife/what-are-llms-and-why-all-the-buzz-around-them-ddeeeadac19d
+2025-04-04 22:49:50,921 - research.web_search - INFO - Successfully fetched content from https://arxiv.org/abs/2310.07064
+2025-04-04 22:49:52,467 - research.web_search - INFO - Successfully fetched content from https://www.newsweek.com/ai-impact-interview-yann-lecun-artificial-intelligence-2054237
+2025-04-04 22:50:17,264 - research.engine - INFO - Analyzed source: https://medium.com/@glovguy/large-language-models-and-rule-following-7078253b74cb (relevance: 0.9)
+2025-04-04 22:50:23,911 - research.engine - INFO - Analyzed source: https://medium.com/@dallemang/explaining-rules-with-llms-bbf3e96e4018 (relevance: 0.6)
+2025-04-04 22:50:28,414 - research.engine - INFO - Analyzed source: https://arxiv.org/abs/2310.07064 (relevance: 0.9)
+2025-04-04 22:50:29,872 - research.engine - INFO - Analyzed source: https://medium.com/hackrlife/what-are-llms-and-why-all-the-buzz-around-them-ddeeeadac19d (relevance: 0.9)
+2025-04-04 22:50:37,842 - research.engine - INFO - Analyzed source: https://www.newsweek.com/ai-impact-interview-yann-lecun-artificial-intelligence-2054237 (relevance: 0.8)
+2025-04-04 22:51:25,029 - utils.pdf_generator - INFO - Generated PDF report using ReportLab: reports/why_llm_is_going_to_rule__20250404_225124.pdf
