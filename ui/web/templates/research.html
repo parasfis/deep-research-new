@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}New Research - Deep Research Assistant{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Start New Research</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('research') }}">
+                    <div class="mb-3">
+                        <label for="topic" class="form-label">Research Topic</label>
+                        <input type="text" class="form-control" id="topic" name="topic" required 
+                               placeholder="Enter your research topic">
+                        <div class="form-text">Be specific to get the most relevant results.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="context" class="form-label">Additional Context (Optional)</label>
+                        <textarea class="form-control" id="context" name="context" rows="4"
+                                  placeholder="Enter any additional context or specific requirements"></textarea>
+                        <div class="form-text">Provide any specific angles, requirements, or background information.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Start Research</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="card mt-4">
+            <div class="card-header bg-light">
+                <h5 class="mb-0">Research Tips</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Use specific, focused research topics for better results</li>
+                    <li class="list-group-item">Add context to narrow down the research scope</li>
+                    <li class="list-group-item">Research may take a few minutes depending on the topic complexity</li>
+                    <li class="list-group-item">Results include analyzed sources with relevance scores</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

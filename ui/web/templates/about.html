@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}About - Deep Research Assistant{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">About Deep Research Assistant</h4>
+            </div>
+            <div class="card-body">
+                <p class="lead">
+                    Deep Research Assistant is a Python 3.8 application that connects to Ollama on Unix systems to perform deep research on any topic using internet sources and user context.
+                </p>
+                
+                <h5 class="mt-4">Key Features</h5>
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item">Connects to Ollama for LLM capabilities</li>
+                    <li class="list-group-item">Performs parallel internet research on any topic</li>
+                    <li class="list-group-item">Interacts with users to gather context and refine research</li>
+                    <li class="list-group-item">Generates comprehensive research reports</li>
+                    <li class="list-group-item">Exports reports as downloadable PDF files</li>
+                </ul>
+                
+                <h5>How It Works</h5>
+                <p>
+                    The Deep Research Assistant uses Ollama's language model capabilities to analyze your research topic and generate relevant search queries. It then performs parallel searches across multiple sources to gather information, analyzes the content for relevance and key facts, and synthesizes the findings into a comprehensive research report.
+                </p>
+                
+                <h5 class="mt-4">System Requirements</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Python 3.8</li>
+                    <li class="list-group-item">Ollama installed on a Unix system</li>
+                    <li class="list-group-item">Internet connection</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

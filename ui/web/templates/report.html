@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}Research Report - Deep Research Assistant{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                <h4 class="mb-0">Research Report</h4>
+                <a href="{{ url_for('generate_pdf', task_id=task_id) }}" class="btn btn-light btn-sm">
+                    <i class="bi bi-file-pdf"></i> Download PDF
+                </a>
+            </div>
+            <div class="card-body">
+                <h2 id="research-topic" class="mb-3">{{ result.topic }}</h2>
+                
+                <div class="report-content mb-4">
+                    {{ result.results.report | safe }}
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Sources</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Relevance</th>
+                                <th>URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for source in result.results.analyzed_sources %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td>{{ source.title }}</td>
+                                <td>
+                                    <div class="progress">
+                                        {% set relevance = source.relevance * 100 %}
+                                        {% if relevance >= 70 %}
+                                            {% set color = "bg-success" %}
+                                        {% elif relevance >= 40 %}
+                                            {% set color = "bg-warning" %}
+                                        {% else %}
+                                            {% set color = "bg-danger" %}
+                                        {% endif %}
+                                        <div class="progress-bar {{ color }}" role="progressbar" 
+                                             style="width: {{ relevance }}%" 
+                                             aria-valuenow="{{ relevance }}" aria-valuemin="0" aria-valuemax="100">
+                                            {{ "%.2f"|format(source.relevance) }}
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="{{ source.url }}" target="_blank" class="text-truncate d-inline-block" style="max-width: 250px;">
+                                        {{ source.url }}
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">Key Facts</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    {% for source in result.results.analyzed_sources %}
+                        {% if source.key_facts %}
+                            <li class="list-group-item">
+                                <h6>{{ source.title }}</h6>
+                                <ul>
+                                    {% for fact in source.key_facts %}
+                                        <li>{{ fact }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-between">
+            <a href="{{ url_for('research') }}" class="btn btn-primary">
+                New Research
+            </a>
+            <a href="{{ url_for('generate_pdf', task_id=task_id) }}" class="btn btn-success">
+                Download PDF Report
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

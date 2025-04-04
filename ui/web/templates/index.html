@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Deep Research Assistant{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <div class="jumbotron p-5 bg-light rounded">
+            <h1 class="display-4">Deep Research Assistant</h1>
+            <p class="lead">A powerful research tool that connects to Ollama to perform deep research on any topic using internet sources and user context.</p>
+            <hr class="my-4">
+            <p>Start a new research project to explore any topic in depth with AI-powered analysis and comprehensive reports.</p>
+            <a class="btn btn-primary btn-lg" href="{{ url_for('research') }}" role="button">Start Research</a>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Intelligent Research</h5>
+                <p class="card-text">Leverages Ollama's LLM capabilities to analyze and synthesize information from multiple sources.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Parallel Processing</h5>
+                <p class="card-text">Performs multiple searches simultaneously to gather comprehensive information quickly.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Downloadable Reports</h5>
+                <p class="card-text">Generate and download professional PDF reports of your research findings.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
