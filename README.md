@@ -168,7 +168,3 @@ Run the application in debug mode for more detailed logs:
 ```bash
 python main.py --web --debug
 ```
-
-## License
-
-MIT
