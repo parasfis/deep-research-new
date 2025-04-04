@@ -25,6 +25,23 @@ app.secret_key = os.urandom(24)  # for session management
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload size
 
+# Error handling middleware
+@app.errorhandler(500)
+def internal_error(error):
+    logger.exception(f"Internal Server Error: {error}")
+    return render_template('error.html', 
+                         message="Internal Server Error - The application encountered an unexpected condition"), 500
+
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('error.html', 
+                         message="Page Not Found - The requested URL was not found"), 404
+
+@app.errorhandler(400)
+def bad_request_error(error):
+    return render_template('error.html', 
+                         message="Bad Request - The server cannot process the request"), 400
+
 # Ensure the reports and uploads directories exist
 Path(config.PDF_OUTPUT_DIR).mkdir(exist_ok=True)
 Path(app.config['UPLOAD_FOLDER']).mkdir(exist_ok=True)

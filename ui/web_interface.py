@@ -1,4 +1,4 @@
-\"""Web interface for Deep Research Assistant.
+"""Web interface for Deep Research Assistant.
 
 This module provides a web interface for interacting with the research engine.
 """

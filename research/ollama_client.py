@@ -1,4 +1,4 @@
-\"""Ollama API client for Deep Research Assistant.
+"""Ollama API client for Deep Research Assistant.
 
 This module provides integration with Ollama API for LLM capabilities.
 """

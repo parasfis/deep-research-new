@@ -1,0 +1,1053 @@
+2025-04-04 19:37:57,085 - __main__ - INFO - Initializing Research Engine
+2025-04-04 19:37:57,085 - __main__ - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 19:37:57,085 - __main__ - ERROR - Unexpected error: module 'ui.web' has no attribute 'ResearchWeb'
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/main.py", line 75, in main
+    web = web_module.ResearchWeb(research_engine)
+          ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ui.web' has no attribute 'ResearchWeb'
+2025-04-04 19:47:54,417 - __main__ - INFO - Initializing Research Engine
+2025-04-04 19:47:54,417 - __main__ - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 19:47:54,417 - __main__ - ERROR - Unexpected error: name 'web_module' is not defined
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/main.py", line 74, in main
+    web = web_module.ResearchWeb(research_engine)
+          ^^^^^^^^^^
+NameError: name 'web_module' is not defined
+2025-04-04 19:54:48,789 - __main__ - INFO - Initializing Research Engine
+2025-04-04 19:54:48,790 - __main__ - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 19:54:48,790 - __main__ - ERROR - Unexpected error: name 'web_module' is not defined
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/main.py", line 74, in main
+    web = web_module.ResearchWeb(research_engine)
+          ^^^^^^^^^^
+NameError: name 'web_module' is not defined
+2025-04-04 19:55:42,862 - __main__ - INFO - Initializing Research Engine
+2025-04-04 19:55:42,862 - __main__ - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 19:55:42,862 - __main__ - ERROR - Unexpected error: type object 'ResearchWeb' has no attribute 'ResearchWeb'
+Traceback (most recent call last):
+  File "/Users/parasgupta/deep-research-new/main.py", line 75, in main
+    web = web_module.ResearchWeb(research_engine)
+          ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ResearchWeb' has no attribute 'ResearchWeb'
+2025-04-04 19:55:55,529 - __main__ - INFO - Initializing Research Engine
+2025-04-04 19:55:55,530 - __main__ - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 19:55:55,530 - ui.web_interface - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 19:55:55,536 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-04 19:55:55,536 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-04 19:56:03,111 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 119, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 19:56:03,116 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:56:03] "[35m[1mGET /?ide_webview_request_time=1743776763098 HTTP/1.1[0m" 500 -
+2025-04-04 19:56:15,109 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 119, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 19:56:15,110 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:56:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-04 19:56:15,161 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:56:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-04 19:56:23,225 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 119, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 19:56:23,227 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:56:23] "[35m[1mGET /?ide_webview_request_time=1743776783221 HTTP/1.1[0m" 500 -
+2025-04-04 19:56:33,372 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 119, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 19:56:33,375 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:56:33] "[35m[1mGET /?ide_webview_request_time=1743776793367 HTTP/1.1[0m" 500 -
+2025-04-04 19:56:44,503 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 119, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 19:56:44,505 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:56:44] "[35m[1mGET /?ide_webview_request_time=1743776783221 HTTP/1.1[0m" 500 -
+2025-04-04 19:56:51,188 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 119, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 19:56:51,189 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:56:51] "[35m[1mGET /?ide_webview_request_time=1743776811182 HTTP/1.1[0m" 500 -
+2025-04-04 19:56:53,822 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 119, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 19:56:53,823 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:56:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-04 19:56:57,742 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:56:57] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2025-04-04 19:56:57,743 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:56:57] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2025-04-04 19:56:57,745 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:56:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-04 19:57:02,278 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 119, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 19:57:02,280 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:57:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-04 19:57:02,375 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:57:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-04 19:57:39,810 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 119, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 19:57:39,811 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:57:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-04 19:57:43,247 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 119, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 19:57:43,248 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:57:43] "[35m[1mGET /?ide_webview_request_time=1743776863243 HTTP/1.1[0m" 500 -
+2025-04-04 19:58:35,816 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 119, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 19:58:35,817 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:58:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-04 20:15:43,228 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 119, in index
+    research_progress = min(remaining_progress,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:15:43,232 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 20:15:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-04 20:15:55,117 - __main__ - INFO - Initializing Research Engine
+2025-04-04 20:15:55,117 - __main__ - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 20:15:55,117 - ui.web_interface - INFO - Starting web interface on 127.0.0.1:5000
+2025-04-04 20:15:55,119 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-04 20:15:55,119 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-04 20:16:06,321 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:16:06,326 - ui.web.app - ERROR - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:16:06,332 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 20:16:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-04 20:16:06,351 - werkzeug - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 333, in run_wsgi
+    execute(self.server.app)
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 320, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1727, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 32, in internal_error
+    return render_template('error.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/error.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:16:08,643 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:16:08,644 - ui.web.app - ERROR - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:16:08,647 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 20:16:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-04 20:16:08,648 - werkzeug - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 333, in run_wsgi
+    execute(self.server.app)
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 320, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1727, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 32, in internal_error
+    return render_template('error.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/error.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:24:05,058 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:24:05,060 - ui.web.app - ERROR - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:24:05,061 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 20:24:05] "[35m[1mGET /?ide_webview_request_time=1743777956206 HTTP/1.1[0m" 500 -
+2025-04-04 20:24:05,062 - werkzeug - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 333, in run_wsgi
+    execute(self.server.app)
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 320, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1727, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 32, in internal_error
+    return render_template('error.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/error.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:29:59,678 - ui.web.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:29:59,680 - ui.web.app - ERROR - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+2025-04-04 20:29:59,683 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 20:29:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-04 20:29:59,684 - werkzeug - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 136, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 333, in run_wsgi
+    execute(self.server.app)
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 320, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1727, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/deep-research-new/ui/web/app.py", line 32, in internal_error
+    return render_template('error.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/error.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/parasgupta/anaconda3/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/parasgupta/deep-research-new/ui/web/templates/base.html", line 40, in template
+    <span class="text-muted">Deep Research Assistant &copy; {% now year %}</span>
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'now'.
