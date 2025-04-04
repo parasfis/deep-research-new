@@ -14,7 +14,7 @@ A Python application that connects to Ollama to perform deep research on any top
 
 ## Requirements
 
-- Python 3.8 or higher
+- Python 3.11 or higher
 - Ollama installed and running (locally or on a remote server)
 - Internet connection
 
